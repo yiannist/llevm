@@ -23,7 +23,7 @@ if test ${DOXYGEN_PATH} = no; then
 fi
 ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[[code:root_dir()]])' -s erlang halt`
 AC_SUBST(ERLANG_ROOT_DIR)
-ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[[lists:concat([["/erts-", erlang:system_info(version)]])]])' -s erlang halt`
+ERTS_DIR=$ERLANG_ROOT_DIR/erts/emulator/beam #`erl -noshell -eval 'io:format("~s~n",[[lists:concat([["/erts-", erlang:system_info(version)]])]])' -s erlang halt`
 AC_SUBST(ERTS_DIR)
 AC_MSG_NOTICE(ERL ROOT DIR: [$ERLANG_ROOT_DIR])
 
