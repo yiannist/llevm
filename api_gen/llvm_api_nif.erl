@@ -18,7 +18,7 @@ generate_types([_|R]) ->
 generate_types([]) ->
     [].
 
-generate_resource_types(Entities) ->
+generate_resource_types(_Entities) ->
     "".
 
 generate_functions([#function{name = Name, 

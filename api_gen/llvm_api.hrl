@@ -91,6 +91,10 @@
       ,Name /= "LLVMAddInstrAttribute"
       ,Name /= "LLVMRemoveInstrAttribute"
       ,Name /= "LLVMConstIntOfArbitraryPrecision"
+      ,Name /= "LLVMElementAtOffset_nif"
+      ,Name /= "LLVMCreateGenericValueOfInt"
+      ,Name /= "LLVMConstInt"
+      ,Name /= "LLVMElementAtOffset"
       ).
 
 
