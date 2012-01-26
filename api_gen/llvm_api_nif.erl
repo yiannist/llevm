@@ -116,6 +116,12 @@ generate_return(Params, Return) ->
 
 generate_return("unsigned"++_) ->
     ["  enif_make_uint(env, retVal)"];
+generate_return("uint64_t") ->
+    ["  enif_make_uint(env, retVal)"];
+generate_return("size"++_) ->
+    ["  enif_make_uint(env, retVal)"];
+generate_return("char") ->
+    ["  enif_make_uint(env, retVal)"];
 generate_return("int") ->
     ["  enif_make_int(env, retVal)"];
 generate_return("long long") ->
@@ -144,6 +150,10 @@ generate_return_with_out_params(OutParams, Return) ->
        OutParams,
        fun(#param{ type = "char **", name = PName }) ->
 	       ["*",PName," != NULL?enif_make_string(env, *",PName,",ERL_NIF_LATIN1):enif_make_list(env,0)"];
+	  (#param{ type = "char *", name = PName }) ->
+	       ["enif_make_int(env, *",PName,")"];
+	  (#param{ type = "size_t", name = PName }) ->
+	       ["enif_make_uint(env, ",PName,")"];
 	  (#param{ type = Type, name = PName }) ->
 	       ["llvm_ptr_create(env, RT",strip_ptr(Type),",*",PName,")"]
        end),");~n~n"].

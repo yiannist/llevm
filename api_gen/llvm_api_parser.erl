@@ -263,6 +263,8 @@ to_erlang_tag("double") ->
     "float";
 to_erlang_tag("void") ->
     "atom";
+to_erlang_tag("bool") ->
+    "boolean";
 to_erlang_tag("LLVMBool") ->
     "boolean";
 to_erlang_tag("constcharconst") ->
@@ -276,7 +278,7 @@ to_erlang_tag("enum "++Rest) ->
 to_erlang_tag(Else) ->
     "'"++Else++"'".
 
-%% Check hardoded arrays
+%% Check hardcoded arrays
 is_array(FName,PName) ->
     lists:member({FName,PName},?ARRAYS).
 is_out_param(_FName,"Out"++_) ->

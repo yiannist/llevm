@@ -1,1 +1,6 @@
 *~
+api_gen/llvm_xml/
+*.beam
+ebin/
+priv/
+#*
