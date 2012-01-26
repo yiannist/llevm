@@ -10,7 +10,7 @@ OBJ_DIR=obj.$(ARCH)
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
 LLVM_CFLAGS=-g3 -Wall -fPIC -I`$(LLVM_CONFIG) --includedir`  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS  -fno-common
-LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs` -lEnhancedDisassembly -lLTO
+LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` `$(LLVM_CONFIG) --libs`# -lEnhancedDisassembly -lLTO
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@
@@ -33,7 +33,7 @@ H_FILES=$(wildcard $(CSRC)/*.h)
 all: compile
 
 compile: compile_erl priv/$(ARCH)/llevm.so
-	@erl -noshell -pa ebin -eval "code:load_file(llevm)." -s init stop
+	@erl -noshell -pa ../llevm/ebin -eval "code:load_file(llevm)." -s init stop
 
 compile_erl: $(EBIN) $(BEAM_FILES)
 	cp $(ESRC)/llevm.app.src $(EBIN)/llevm.app
