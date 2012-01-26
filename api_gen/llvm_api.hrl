@@ -49,7 +49,9 @@
 		    {"LLVMRemoveModulePrivider","OutMod"},
 		    {"LLVMRemoveModulePrivider","OutError"},
 		    {"LLVMFindFunction","OutFn"},
-		    {"LLVMParseBitcode","OutModule"}
+		    {"LLVMParseBitcode","OutModule"},
+		    {"LLVMDisasmInstruction", "OutString"},
+		    {"LLVMDisasmInstruction", "OutStringSize"}
 		   ]).
 
 -define(IS_ENUM(Value),
@@ -80,6 +82,15 @@
       ,Name /= "llvm_destroy_optimizer"
       ,Name /= "llvm_read_object_file"
       ,Name /= "llvm_optimize_modules"
+      %% MINE:
+      ,Name /= "LLVMDisasmInstruction"
+      ,Name /= "LLVMAddFunctionAttr"
+      ,Name /= "LLVMRemoveFunctionAttr"
+      ,Name /= "LLVMAddAttribute"
+      ,Name /= "LLVMRemoveAttribute"
+      ,Name /= "LLVMAddInstrAttribute"
+      ,Name /= "LLVMRemoveInstrAttribute"
+      ,Name /= "LLVMConstIntOfArbitraryPrecision"
       ).
 
 
