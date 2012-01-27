@@ -10,7 +10,7 @@ OBJ_DIR=obj.$(ARCH)
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
 LLVM_CFLAGS=-g3 -Wall -fPIC -I`$(LLVM_CONFIG) --includedir`  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS  -fno-common
-LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` `$(LLVM_CONFIG) --libs` -lEnhancedDisassembly -lLTO
+LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` `$(LLVM_CONFIG) --libs` #-lEnhancedDisassembly -lLTO
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@
@@ -51,7 +51,7 @@ priv/$(ARCH) $(OBJ_DIR) $(EBIN) $(INCLUDE_DIR) logs:
 	@mkdir -p $@
 
 clean:
-	rm -rf $(OBJ_DIR) priv $(EBIN)
+	rm -rf $(OBJ_DIR) priv $(EBIN) api_gen/llvm_xml api_gen/*.beam
 
 very_clean: clean
 	rm -rf config.status autom4te.cache Makefile config.log
@@ -60,6 +60,11 @@ copy:
 	cp src/llevm.erl ~/Downloads/nif/llevm/
 	cp src/llevm.hrl ~/Downloads/nif/llevm/
 	cp csrc/llevm.c  ~/Downloads/nif/llevm/
+
+copy_test:
+	cp src/llevm.erl ~/Downloads/nif/llevm_test/
+	cp src/llevm.hrl ~/Downloads/nif/llevm_test/
+	cp csrc/llevm.c  ~/Downloads/nif/llevm_test/
 
 shell:
 	erl -pa ebin

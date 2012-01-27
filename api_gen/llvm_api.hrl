@@ -95,6 +95,8 @@
       ,Name /= "LLVMCreateGenericValueOfInt"
       ,Name /= "LLVMConstInt"
       ,Name /= "LLVMElementAtOffset"
+      %% ,Name /= "EDNumOperands"
+      %% ,Name /= "EDBranchTargetID"
       ).
 
 
