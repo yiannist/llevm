@@ -84,19 +84,10 @@
       ,Name /= "llvm_optimize_modules"
       %% MINE:
       ,Name /= "LLVMDisasmInstruction"
-      ,Name /= "LLVMAddFunctionAttr"
-      ,Name /= "LLVMRemoveFunctionAttr"
-      ,Name /= "LLVMAddAttribute"
-      ,Name /= "LLVMRemoveAttribute"
-      ,Name /= "LLVMAddInstrAttribute"
-      ,Name /= "LLVMRemoveInstrAttribute"
       ,Name /= "LLVMConstIntOfArbitraryPrecision"
       ,Name /= "LLVMElementAtOffset_nif"
       ,Name /= "LLVMCreateGenericValueOfInt"
       ,Name /= "LLVMConstInt"
-      ,Name /= "LLVMElementAtOffset"
-      %% ,Name /= "EDNumOperands"
-      %% ,Name /= "EDBranchTargetID"
       ).
 
 
