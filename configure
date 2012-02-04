@@ -3140,7 +3140,7 @@ $as_echo "$as_me: WARNING: doxygen not found in path, cannot re-generate llvm ni
 fi
 ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[code:root_dir()])' -s erlang halt`
 
-ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[lists:concat([["/erts-", erlang:system_info(version)]])])' -s erlang halt`
+ERTS_DIR=$ERLANG_ROOT_DIR/erts/emulator/beam #`erl -noshell -eval 'io:format("~s~n",[[lists:concat([["/erts-", erlang:system_info(version)]])]])' -s erlang halt`
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: ERL ROOT DIR: $ERLANG_ROOT_DIR" >&5
 $as_echo "$as_me: ERL ROOT DIR: $ERLANG_ROOT_DIR" >&6;}
@@ -3586,7 +3586,7 @@ case $ac_cv_sizeof_void_p in
        	;;
 esac
 
-CFLAGS="-g3 -Wall -fPIC "
+CFLAGS="-g3 -Wall -fPIC"
 
 case $host_os in
      darwin*)

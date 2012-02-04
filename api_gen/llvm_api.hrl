@@ -3,7 +3,7 @@
 -record(enum_member, {name, value, docs }).
 -record(enum, {name, members = [], docs }).
 
--record(param, {name, type, erlang_type, erlang_tag, array = false, 
+-record(param, {name, type, erlang_type, erlang_tag, array = false,
 		out_param = false}).
 -record(function, {name, return_type, params = [], docs }).
 
@@ -64,10 +64,10 @@
 	Value == "LLVMIntPredicate";
 	Value == "LLVMRealPredicate";
 	Value == "lto_symbol_attributes";
-        Value == "lto_debug_model";
-        Value == "lto_codegen_model";
-        Value == "llvm_lto_status_t").
-	
+	Value == "lto_debug_model";
+	Value == "lto_codegen_model";
+	Value == "llvm_lto_status_t").
+
 -define(LIMIT, when
       Name /= "LLVMCreateMemoryBufferWithSTDIN"
       ,Name /= "lto_module_create_from_fd"
@@ -87,16 +87,15 @@
       ,Name /= "LLVMConstIntOfArbitraryPrecision"
       ,Name /= "LLVMElementAtOffset_nif"
       ,Name /= "LLVMCreateGenericValueOfInt"
-      ,Name /= "LLVMConstInt"
       ).
 
 
--define(LIMIT_OLD, when 
-      Name == "LLVMModuleCreateWithName"; 
+-define(LIMIT_OLD, when
+      Name == "LLVMModuleCreateWithName";
       Name == "LLVMDumpModule";
       Name == "LLVMDumpValue";
-      Name == "LLVMConstReal"; 
-      Name == "LLVMCreateBuilderInContext"; 
+      Name == "LLVMConstReal";
+      Name == "LLVMCreateBuilderInContext";
       Name == "LLVMGetGlobalContext";
       Name == "LLVMConstReal";
       Name == "LLVMAppendBasicBlock";
@@ -114,12 +113,12 @@
       Name == "LLVMBuildCall";
       Name == "LLVMBuildUIToFP";
       Name == "LLVMConstNull";
-      Name == "LLVMGetBasicBlockParent"; 
-      Name == "LLVMGetInsertBlock"; 
-      Name == "LLVMBuildCondBr"; 
-      Name == "LLVMBuildBr"; 
-      Name == "LLVMBuildPhi"; 
-      Name == "LLVMAddIncoming"; 
+      Name == "LLVMGetBasicBlockParent";
+      Name == "LLVMGetInsertBlock";
+      Name == "LLVMBuildCondBr";
+      Name == "LLVMBuildBr";
+      Name == "LLVMBuildPhi";
+      Name == "LLVMAddIncoming";
       Name == "LLVMAddFunction";
 %% Types
       Name == "LLVMInt1Type";
@@ -178,10 +177,10 @@
       Name == "LLVMInitializeCodeGen";
       Name == "LLVMInitializeTarget";
 %      Name == "LLVMGetNamedFunction";
-%      Name == "LLVMCountParams"; 
+%      Name == "LLVMCountParams";
 %      Name == "LLVMBuildCall";
 %      Name == "LLVMSetLinkage";
-%      Name == "LLVMDeleteFunction"; 
+%      Name == "LLVMDeleteFunction";
 %      Name == "LLVMCountBasicBlocks"
       false
       ).
