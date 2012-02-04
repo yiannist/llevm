@@ -63,7 +63,7 @@ copy:
 
 copy_test:
 	cp src/llevm.erl ~/Downloads/nif/llevm_test/
-	cp src/llevm.hrl ~/Downloads/nif/llevm_test/
+	cp include/llevm.hrl ~/Downloads/nif/llevm_test/
 	cp csrc/llevm.c  ~/Downloads/nif/llevm_test/
 
 shell:
