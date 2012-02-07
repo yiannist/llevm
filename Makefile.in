@@ -58,7 +58,7 @@ very_clean: clean
 
 copy:
 	cp src/llevm.erl ~/Downloads/nif/llevm/
-	cp src/llevm.hrl ~/Downloads/nif/llevm/
+	cp include/llevm.hrl ~/Downloads/nif/llevm/
 	cp csrc/llevm.c  ~/Downloads/nif/llevm/
 
 copy_test:
