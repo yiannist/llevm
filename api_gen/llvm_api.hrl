@@ -87,6 +87,8 @@
       ,Name /= "LLVMConstIntOfArbitraryPrecision"
       ,Name /= "LLVMElementAtOffset_nif"
       ,Name /= "LLVMCreateGenericValueOfInt"
+      ,Name /= "LLVMCreateDisasm"
+      ,Name /= "LLVMDisasmDispose"
       ).
 
 
