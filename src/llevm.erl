@@ -5,195 +5,11 @@
 -on_load(load_my_nifs/0).
 
 %% @@EXPORTS@@
-%% -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,43}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
 
--export(['lto_get_version'/0]).
--export(['lto_get_error_message'/0]).
--export(['lto_module_is_object_file'/1]).
--export(['lto_module_is_object_file_for_target'/2]).
--export(['lto_module_is_object_file_in_memory'/2]).
--export(['lto_module_is_object_file_in_memory_for_target'/3]).
--export(['lto_module_create'/1]).
--export(['lto_module_create_from_memory'/2]).
--export(['lto_module_dispose'/1]).
--export(['lto_module_get_target_triple'/1]).
--export(['lto_module_set_target_triple'/2]).
--export(['lto_module_get_num_symbols'/1]).
--export(['lto_module_get_symbol_name'/2]).
--export(['lto_module_get_symbol_attribute'/2]).
--export(['lto_codegen_create'/0]).
--export(['lto_codegen_dispose'/1]).
--export(['lto_codegen_add_module'/2]).
--export(['lto_codegen_set_debug_model'/2]).
--export(['lto_codegen_set_pic_model'/2]).
--export(['lto_codegen_set_cpu'/2]).
--export(['lto_codegen_set_assembler_path'/2]).
--export(['lto_codegen_set_assembler_args'/3]).
--export(['lto_codegen_add_must_preserve_symbol'/2]).
--export(['lto_codegen_write_merged_modules'/2]).
--export(['lto_codegen_compile'/2]).
--export(['lto_codegen_debug_options'/2]).
-%% --- Stop generating from lto_8h.xml
+%% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,41}}--
-
--export(['LLVMInitializeAllTargetInfos'/0]).
--export(['LLVMInitializeAllTargets'/0]).
--export(['LLVMInitializeNativeTarget'/0]).
--export(['LLVMCreateTargetData'/1]).
--export(['LLVMAddTargetData'/2]).
--export(['LLVMCopyStringRepOfTargetData'/1]).
--export(['LLVMByteOrder'/1]).
--export(['LLVMPointerSize'/1]).
--export(['LLVMIntPtrType'/1]).
--export(['LLVMSizeOfTypeInBits'/2]).
--export(['LLVMStoreSizeOfType'/2]).
--export(['LLVMABISizeOfType'/2]).
--export(['LLVMABIAlignmentOfType'/2]).
--export(['LLVMCallFrameAlignmentOfType'/2]).
--export(['LLVMPreferredAlignmentOfType'/2]).
--export(['LLVMPreferredAlignmentOfGlobal'/2]).
--export(['LLVMElementAtOffset'/3]).
--export(['LLVMOffsetOfElement'/3]).
--export(['LLVMInvalidateStructLayout'/2]).
--export(['LLVMDisposeTargetData'/1]).
-%% --- Stop generating from Target_8h.xml
-
-%% -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,40}}--
-
--export(['LLVMAddAggressiveDCEPass'/1]).
--export(['LLVMAddCFGSimplificationPass'/1]).
--export(['LLVMAddDeadStoreEliminationPass'/1]).
--export(['LLVMAddGVNPass'/1]).
--export(['LLVMAddIndVarSimplifyPass'/1]).
--export(['LLVMAddInstructionCombiningPass'/1]).
--export(['LLVMAddJumpThreadingPass'/1]).
--export(['LLVMAddLICMPass'/1]).
--export(['LLVMAddLoopDeletionPass'/1]).
--export(['LLVMAddLoopRotatePass'/1]).
--export(['LLVMAddLoopUnrollPass'/1]).
--export(['LLVMAddLoopUnswitchPass'/1]).
--export(['LLVMAddMemCpyOptPass'/1]).
--export(['LLVMAddPromoteMemoryToRegisterPass'/1]).
--export(['LLVMAddReassociatePass'/1]).
--export(['LLVMAddSCCPPass'/1]).
--export(['LLVMAddScalarReplAggregatesPass'/1]).
--export(['LLVMAddScalarReplAggregatesPassWithThreshold'/2]).
--export(['LLVMAddSimplifyLibCallsPass'/1]).
--export(['LLVMAddTailCallEliminationPass'/1]).
--export(['LLVMAddConstantPropagationPass'/1]).
--export(['LLVMAddDemoteMemoryToRegisterPass'/1]).
--export(['LLVMAddVerifierPass'/1]).
-%% --- Stop generating from Scalar_8h.xml
-
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,39}}--
-
-%% --- Stop generating from LinkTimeOptimizer_8h.xml
-
-%% -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,37}}--
-
--export(['LLVMInitializeTransformUtils'/1]).
--export(['LLVMInitializeScalarOpts'/1]).
--export(['LLVMInitializeInstCombine'/1]).
--export(['LLVMInitializeInstrumentation'/1]).
--export(['LLVMInitializeIPA'/1]).
--export(['LLVMInitializeCodeGen'/1]).
--export(['LLVMInitializeTarget'/1]).
-%% --- Stop generating from Initialization_8h.xml
-
-%% -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,36}}--
-
--export(['LLVMAddArgumentPromotionPass'/1]).
--export(['LLVMAddConstantMergePass'/1]).
--export(['LLVMAddDeadArgEliminationPass'/1]).
--export(['LLVMAddDeadTypeEliminationPass'/1]).
--export(['LLVMAddFunctionAttrsPass'/1]).
--export(['LLVMAddFunctionInliningPass'/1]).
--export(['LLVMAddGlobalDCEPass'/1]).
--export(['LLVMAddGlobalOptimizerPass'/1]).
--export(['LLVMAddIPConstantPropagationPass'/1]).
--export(['LLVMAddLowerSetJmpPass'/1]).
--export(['LLVMAddPruneEHPass'/1]).
--export(['LLVMAddIPSCCPPass'/1]).
--export(['LLVMAddInternalizePass'/2]).
--export(['LLVMAddRaiseAllocationsPass'/1]).
--export(['LLVMAddStripDeadPrototypesPass'/1]).
--export(['LLVMAddStripSymbolsPass'/1]).
-%% --- Stop generating from IPO_8h.xml
-
-%% -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,35}}--
-
--export(['LLVMLinkInJIT'/0]).
--export(['LLVMLinkInInterpreter'/0]).
--export(['LLVMCreateGenericValueOfInt'/3]).
--export(['LLVMCreateGenericValueOfPointer'/1]).
--export(['LLVMCreateGenericValueOfFloat'/2]).
--export(['LLVMGenericValueIntWidth'/1]).
--export(['LLVMGenericValueToInt'/2]).
--export(['LLVMGenericValueToPointer'/1]).
--export(['LLVMGenericValueToFloat'/2]).
--export(['LLVMDisposeGenericValue'/1]).
--export(['LLVMCreateExecutionEngineForModule'/1]).
--export(['LLVMCreateInterpreterForModule'/1]).
--export(['LLVMCreateJITCompilerForModule'/2]).
--export(['LLVMCreateExecutionEngine'/1]).
--export(['LLVMCreateInterpreter'/1]).
--export(['LLVMCreateJITCompiler'/2]).
--export(['LLVMDisposeExecutionEngine'/1]).
--export(['LLVMRunStaticConstructors'/1]).
--export(['LLVMRunStaticDestructors'/1]).
--export(['LLVMRunFunctionAsMain'/5]).
--export(['LLVMRunFunction'/4]).
--export(['LLVMFreeMachineCodeForFunction'/2]).
--export(['LLVMAddModule'/2]).
--export(['LLVMAddModuleProvider'/2]).
--export(['LLVMRemoveModule'/2]).
--export(['LLVMRemoveModuleProvider'/2]).
--export(['LLVMFindFunction'/2]).
--export(['LLVMRecompileAndRelinkFunction'/2]).
--export(['LLVMGetExecutionEngineTargetData'/1]).
--export(['LLVMAddGlobalMapping'/3]).
--export(['LLVMGetPointerToGlobal'/2]).
-%% --- Stop generating from ExecutionEngine_8h.xml
-
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,34}}--
-
--export(['EDGetDisassembler'/3]).
--export(['EDGetRegisterName'/3]).
--export(['EDRegisterIsStackPointer'/2]).
--export(['EDRegisterIsProgramCounter'/2]).
--export(['EDCreateInsts'/6]).
--export(['EDReleaseInst'/1]).
--export(['EDInstByteSize'/1]).
--export(['EDGetInstString'/2]).
--export(['EDInstIsBranch'/1]).
--export(['EDInstIsMove'/1]).
--export(['EDBranchTargetID'/1]).
--export(['EDMoveSourceID'/1]).
--export(['EDMoveTargetID'/1]).
--export(['EDNumTokens'/1]).
--export(['EDGetToken'/3]).
--export(['EDGetTokenString'/2]).
--export(['EDOperandIndexForToken'/1]).
--export(['EDTokenIsWhitespace'/1]).
--export(['EDTokenIsPunctuation'/1]).
--export(['EDTokenIsOpcode'/1]).
--export(['EDTokenIsLiteral'/1]).
--export(['EDTokenIsRegister'/1]).
--export(['EDTokenIsNegativeLiteral'/1]).
--export(['EDLiteralTokenAbsoluteValue'/2]).
--export(['EDRegisterTokenValue'/2]).
--export(['EDNumOperands'/1]).
--export(['EDGetOperand'/3]).
--export(['EDOperandIsRegister'/1]).
--export(['EDOperandIsImmediate'/1]).
--export(['EDOperandIsMemory'/1]).
--export(['EDRegisterOperandValue'/2]).
--export(['EDImmediateOperandValue'/2]).
--export(['EDEvaluateOperand'/4]).
-%% --- Stop generating from EnhancedDisassembly_8h.xml
-
-%% -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
 
 -export(['LLVMDisposeMessage'/1]).
 -export(['LLVMContextCreate'/0]).
@@ -208,14 +24,11 @@
 -export(['LLVMSetDataLayout'/2]).
 -export(['LLVMGetTarget'/1]).
 -export(['LLVMSetTarget'/2]).
--export(['LLVMAddTypeName'/3]).
--export(['LLVMDeleteTypeName'/2]).
--export(['LLVMGetTypeByName'/2]).
--export(['LLVMGetTypeName'/2]).
 -export(['LLVMDumpModule'/1]).
 -export(['LLVMSetModuleInlineAsm'/2]).
 -export(['LLVMGetModuleContext'/1]).
 -export(['LLVMGetTypeKind'/1]).
+-export(['LLVMTypeIsSized'/1]).
 -export(['LLVMGetTypeContext'/1]).
 -export(['LLVMInt1TypeInContext'/1]).
 -export(['LLVMInt8TypeInContext'/1]).
@@ -247,9 +60,14 @@
 -export(['LLVMGetParamTypes'/2]).
 -export(['LLVMStructTypeInContext'/4]).
 -export(['LLVMStructType'/3]).
+-export(['LLVMStructCreateNamed'/2]).
+-export(['LLVMGetStructName'/1]).
+-export(['LLVMStructSetBody'/4]).
 -export(['LLVMCountStructElementTypes'/1]).
 -export(['LLVMGetStructElementTypes'/2]).
 -export(['LLVMIsPackedStruct'/1]).
+-export(['LLVMIsOpaqueStruct'/1]).
+-export(['LLVMGetTypeByName'/2]).
 -export(['LLVMArrayType'/2]).
 -export(['LLVMPointerType'/2]).
 -export(['LLVMVectorType'/2]).
@@ -259,16 +77,10 @@
 -export(['LLVMGetVectorSize'/1]).
 -export(['LLVMVoidTypeInContext'/1]).
 -export(['LLVMLabelTypeInContext'/1]).
--export(['LLVMOpaqueTypeInContext'/1]).
 -export(['LLVMX86MMXTypeInContext'/1]).
 -export(['LLVMVoidType'/0]).
 -export(['LLVMLabelType'/0]).
--export(['LLVMOpaqueType'/0]).
 -export(['LLVMX86MMXType'/0]).
--export(['LLVMCreateTypeHandle'/1]).
--export(['LLVMRefineType'/2]).
--export(['LLVMResolveTypeHandle'/1]).
--export(['LLVMDisposeTypeHandle'/1]).
 -export(['LLVMTypeOf'/1]).
 -export(['LLVMGetValueName'/1]).
 -export(['LLVMSetValueName'/2]).
@@ -280,8 +92,11 @@
 -export(['LLVMIsAArgument'/1]).
 -export(['LLVMIsABasicBlock'/1]).
 -export(['LLVMIsAInlineAsm'/1]).
+-export(['LLVMIsAMDNode'/1]).
+-export(['LLVMIsAMDString'/1]).
 -export(['LLVMIsAUser'/1]).
 -export(['LLVMIsAConstant'/1]).
+-export(['LLVMIsABlockAddress'/1]).
 -export(['LLVMIsAConstantAggregateZero'/1]).
 -export(['LLVMIsAConstantArray'/1]).
 -export(['LLVMIsAConstantExpr'/1]).
@@ -301,6 +116,7 @@
 -export(['LLVMIsAIntrinsicInst'/1]).
 -export(['LLVMIsADbgInfoIntrinsic'/1]).
 -export(['LLVMIsADbgDeclareInst'/1]).
+-export(['LLVMIsAEHExceptionInst'/1]).
 -export(['LLVMIsAEHSelectorInst'/1]).
 -export(['LLVMIsAMemIntrinsic'/1]).
 -export(['LLVMIsAMemCpyInst'/1]).
@@ -313,17 +129,19 @@
 -export(['LLVMIsAGetElementPtrInst'/1]).
 -export(['LLVMIsAInsertElementInst'/1]).
 -export(['LLVMIsAInsertValueInst'/1]).
+-export(['LLVMIsALandingPadInst'/1]).
 -export(['LLVMIsAPHINode'/1]).
 -export(['LLVMIsASelectInst'/1]).
 -export(['LLVMIsAShuffleVectorInst'/1]).
 -export(['LLVMIsAStoreInst'/1]).
 -export(['LLVMIsATerminatorInst'/1]).
 -export(['LLVMIsABranchInst'/1]).
+-export(['LLVMIsAIndirectBrInst'/1]).
 -export(['LLVMIsAInvokeInst'/1]).
 -export(['LLVMIsAReturnInst'/1]).
 -export(['LLVMIsASwitchInst'/1]).
 -export(['LLVMIsAUnreachableInst'/1]).
--export(['LLVMIsAUnwindInst'/1]).
+-export(['LLVMIsAResumeInst'/1]).
 -export(['LLVMIsAUnaryInstruction'/1]).
 -export(['LLVMIsAAllocaInst'/1]).
 -export(['LLVMIsACastInst'/1]).
@@ -360,8 +178,10 @@
 -export(['LLVMMDString'/2]).
 -export(['LLVMMDNodeInContext'/3]).
 -export(['LLVMMDNode'/2]).
+-export(['LLVMGetMDString'/2]).
+-export(['LLVMGetNamedMetadataNumOperands'/2]).
+-export(['LLVMGetNamedMetadataOperands'/3]).
 -export(['LLVMConstInt'/3]).
--export(['LLVMConstIntOfArbitraryPrecision'/3]).
 -export(['LLVMConstIntOfString'/3]).
 -export(['LLVMConstIntOfStringAndSize'/4]).
 -export(['LLVMConstReal'/2]).
@@ -374,6 +194,7 @@
 -export(['LLVMConstString'/3]).
 -export(['LLVMConstArray'/3]).
 -export(['LLVMConstStruct'/3]).
+-export(['LLVMConstNamedStruct'/3]).
 -export(['LLVMConstVector'/2]).
 -export(['LLVMGetConstOpcode'/1]).
 -export(['LLVMAlignOf'/1]).
@@ -494,6 +315,7 @@
 -export(['LLVMValueIsBasicBlock'/1]).
 -export(['LLVMValueAsBasicBlock'/1]).
 -export(['LLVMGetBasicBlockParent'/1]).
+-export(['LLVMGetBasicBlockTerminator'/1]).
 -export(['LLVMCountBasicBlocks'/1]).
 -export(['LLVMGetBasicBlocks'/2]).
 -export(['LLVMGetFirstBasicBlock'/1]).
@@ -506,13 +328,17 @@
 -export(['LLVMAppendBasicBlock'/2]).
 -export(['LLVMInsertBasicBlock'/2]).
 -export(['LLVMDeleteBasicBlock'/1]).
+-export(['LLVMRemoveBasicBlockFromParent'/1]).
 -export(['LLVMMoveBasicBlockBefore'/2]).
 -export(['LLVMMoveBasicBlockAfter'/2]).
--export(['LLVMGetInstructionParent'/1]).
 -export(['LLVMGetFirstInstruction'/1]).
 -export(['LLVMGetLastInstruction'/1]).
+-export(['LLVMGetInstructionParent'/1]).
 -export(['LLVMGetNextInstruction'/1]).
 -export(['LLVMGetPreviousInstruction'/1]).
+-export(['LLVMInstructionEraseFromParent'/1]).
+-export(['LLVMGetInstructionOpcode'/1]).
+-export(['LLVMGetICmpPredicate'/1]).
 -export(['LLVMSetInstructionCallConv'/2]).
 -export(['LLVMGetInstructionCallConv'/1]).
 -export(['LLVMAddInstrAttribute'/3]).
@@ -520,6 +346,7 @@
 -export(['LLVMSetInstrParamAlignment'/3]).
 -export(['LLVMIsTailCall'/1]).
 -export(['LLVMSetTailCall'/2]).
+-export(['LLVMGetSwitchDefaultDest'/1]).
 -export(['LLVMAddIncoming'/4]).
 -export(['LLVMCountIncoming'/1]).
 -export(['LLVMGetIncomingValue'/2]).
@@ -545,10 +372,13 @@
 -export(['LLVMBuildSwitch'/4]).
 -export(['LLVMBuildIndirectBr'/3]).
 -export(['LLVMBuildInvoke'/7]).
--export(['LLVMBuildUnwind'/1]).
+-export(['LLVMBuildLandingPad'/5]).
+-export(['LLVMBuildResume'/2]).
 -export(['LLVMBuildUnreachable'/1]).
 -export(['LLVMAddCase'/3]).
 -export(['LLVMAddDestination'/2]).
+-export(['LLVMAddClause'/2]).
+-export(['LLVMSetCleanup'/2]).
 -export(['LLVMBuildAdd'/4]).
 -export(['LLVMBuildNSWAdd'/4]).
 -export(['LLVMBuildNUWAdd'/4]).
@@ -640,14 +470,14 @@
 -export(['LLVMDisposePassManager'/1]).
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
 
 -export(['LLVMWriteBitcodeToFile'/2]).
 -export(['LLVMWriteBitcodeToFD'/4]).
 -export(['LLVMWriteBitcodeToFileHandle'/2]).
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
 
 -export(['LLVMParseBitcode'/1]).
 -export(['LLVMParseBitcodeInContext'/2]).
@@ -657,7 +487,7 @@
 -export(['LLVMGetBitcodeModuleProvider'/1]).
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
 
 -export(['LLVMVerifyModule'/2]).
 -export(['LLVMVerifyFunction'/2]).
@@ -669,77 +499,17 @@
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
 %% @@TYPES@@
-%% -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,42}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
 
--opaque 'lto_symbol_attributes'() :: {'lto_symbol_attributes',integer()}.
--opaque 'lto_debug_model'() :: {'lto_debug_model',integer()}.
--opaque 'lto_codegen_model'() :: {'lto_codegen_model',integer()}.
--opaque 'lto_module_t'() :: {'lto_module_t',binary()}.
-%% opaque reference to a loaded object module 
--opaque 'lto_code_gen_t'() :: {'lto_code_gen_t',binary()}.
-%% opaque reference to a code generator 
-%% --- Stop generating from lto_8h.xml
+-opaque 'LLVMDisasmContextRef'() :: {'LLVMDisasmContextRef',binary()}.
+%% An opaque reference to a disassembler context. 
+-opaque 'LLVMOpInfoCallback'() :: {'LLVMOpInfoCallback',binary()}.
+%% The type for the operand information call back function. This is called to get the symbolic information for an operand of an instruction. Typically this is from the relocation information, symbol table, etc. That block of information is saved when the disassembler context is created and passed to the call back in the DisInfo parameter. The instruction containing operand is at the PC parameter. For some instruction sets, there can be more than one operand with symbolic information. To determine the symbolic operand information for each operand, the bytes for the specific operand in the instruction are specified by the Offset parameter and its byte widith is the size parameter. For instructions sets with fixed widths and one symbolic operand per instruction, the Offset parameter will be zero and Size parameter will be the instruction width. The information is returned in TagBuf and is Triple specific with its specific information defined by the value of TagType for that Triple. If symbolic information is returned the function returns 1, otherwise it returns 0. 
+-opaque 'LLVMSymbolLookupCallback'() :: {'LLVMSymbolLookupCallback',binary()}.
+%% The type for the symbol lookup function. This may be called by the disassembler for things like adding a comment for a PC plus a constant offset load instruction to use a symbol name instead of a load address value. It is passed the block information is saved when the disassembler context is created and the ReferenceValue to look up as a symbol. If no symbol is found for the ReferenceValue NULL is returned. The ReferenceType of the instruction is passed indirectly as is the PC of the instruction in ReferencePC. If the output reference can be determined its type is returned indirectly in ReferenceType along with ReferenceName if any, or that is set to NULL. 
+%% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,41}}--
-
--opaque 'LLVMByteOrdering'() :: {'LLVMByteOrdering',integer()}.
--opaque 'LLVMTargetDataRef'() :: {'LLVMTargetDataRef',binary()}.
-%% 
--opaque 'LLVMStructLayoutRef'() :: {'LLVMStructLayoutRef',binary()}.
-%% 
-%% --- Stop generating from Target_8h.xml
-
-%% -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,40}}--
-
-%% --- Stop generating from Scalar_8h.xml
-
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,38}}--
-
--opaque 'llvm_lto_status'() :: {'llvm_lto_status',integer()}.
--opaque 'llvm_lto_t'() :: {'llvm_lto_t',binary()}.
-%% 
--type 'llvm_lto_status_t'() :: llvm_lto_status().
-%% This provides a C-visible enumerator to manage status codes. This should map exactly onto the C++ enumerator LTOStatus. 
-
-%% --- Stop generating from LinkTimeOptimizer_8h.xml
-
-%% -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,37}}--
-
-%% --- Stop generating from Initialization_8h.xml
-
-%% -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,36}}--
-
-%% --- Stop generating from IPO_8h.xml
-
-%% -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,35}}--
-
--opaque 'LLVMGenericValueRef'() :: {'LLVMGenericValueRef',binary()}.
-%% 
--opaque 'LLVMExecutionEngineRef'() :: {'LLVMExecutionEngineRef',binary()}.
-%% 
-%% --- Stop generating from ExecutionEngine_8h.xml
-
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,34}}--
-
--opaque '@0'() :: {'@0',integer()}.
--opaque 'EDByteReaderCallback'() :: {'EDByteReaderCallback',binary()}.
-%% Interface to memory from which instructions may be read. byteA pointer whose target should be filled in with the data returned. addressThe address of the byte to be read. argAn anonymous argument for client use. 0 on success; -1 otherwise. 
--opaque 'EDRegisterReaderCallback'() :: {'EDRegisterReaderCallback',binary()}.
-%% Interface to registers from which registers may be read. valueA pointer whose target should be filled in with the value of the register. regIDThe LLVM register identifier for the register to read. argAn anonymous argument for client use. 0 if the register could be read; -1 otherwise. 
--type 'EDAssemblySyntax_t'() :: integer().
-%% An assembly syntax for use in tokenizing instructions. 
-
--opaque 'EDDisassemblerRef'() :: {'EDDisassemblerRef',binary()}.
-%% Encapsulates a disassembler for a single CPU architecture. 
--opaque 'EDInstRef'() :: {'EDInstRef',binary()}.
-%% Encapsulates a single disassembled instruction in one assembly syntax. 
--opaque 'EDTokenRef'() :: {'EDTokenRef',binary()}.
-%% Encapsulates a token from the disassembly of an instruction. 
--opaque 'EDOperandRef'() :: {'EDOperandRef',binary()}.
-%% Encapsulates an operand of an instruction. 
-%% --- Stop generating from EnhancedDisassembly_8h.xml
-
-%% -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -749,6 +519,7 @@
 -opaque 'LLVMCallConv'() :: {'LLVMCallConv',integer()}.
 -opaque 'LLVMIntPredicate'() :: {'LLVMIntPredicate',integer()}.
 -opaque 'LLVMRealPredicate'() :: {'LLVMRealPredicate',integer()}.
+-opaque 'LLVMLandingPadClauseTy'() :: {'LLVMLandingPadClauseTy',integer()}.
 -type 'LLVMBool'() :: integer().
 %% 
 
@@ -758,8 +529,6 @@
 %% The top-level container for all other LLVM Intermediate Representation (IR) objects. See the llvm::Module class. 
 -opaque 'LLVMTypeRef'() :: {'LLVMTypeRef',binary()}.
 %% Each value in the LLVM IR has a type, an LLVMTypeRef. See the llvm::Type class. 
--opaque 'LLVMTypeHandleRef'() :: {'LLVMTypeHandleRef',binary()}.
-%% When building recursive types using LLVMRefineType, LLVMTypeRef values may become invalid; use LLVMTypeHandleRef to resolve this problem. See the llvm::AbstractTypeHolder class. 
 -opaque 'LLVMValueRef'() :: {'LLVMValueRef',binary()}.
 %% 
 -opaque 'LLVMBasicBlockRef'() :: {'LLVMBasicBlockRef',binary()}.
@@ -778,15 +547,15 @@
 %% Used to get the users and usees of a Value. See the llvm::Use class. 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
 
 -opaque 'LLVMVerifierFailureAction'() :: {'LLVMVerifierFailureAction',integer()}.
 %% --- Stop generating from Analysis_8h.xml
@@ -796,1140 +565,11 @@ load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
 %% @@FUNCTIONS@@
-%% -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,43}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
 
-%% @doc Returns a printable string. 
--spec 'lto_get_version'() -> string().
-'lto_get_version'() ->
-	{string,'lto_get_version_internal'()}.
-'lto_get_version_internal'() ->
-	nif_not_loaded.
+%% --- Stop generating from Disassembler_8h.xml
 
-%% @doc Returns the last error string or NULL if last operation was sucessful. 
--spec 'lto_get_error_message'() -> string().
-'lto_get_error_message'() ->
-	{string,'lto_get_error_message_internal'()}.
-'lto_get_error_message_internal'() ->
-	nif_not_loaded.
-
-%% @doc Checks if a file is a loadable object file. 
--spec 'lto_module_is_object_file'(Path :: string()) -> 'bool'().
-'lto_module_is_object_file'(Path) ->
-	{'bool','lto_module_is_object_file_internal'(Path)}.
-'lto_module_is_object_file_internal'(_Path) ->
-	nif_not_loaded.
-
-%% @doc Checks if a file is a loadable object compiled for requested target. 
--spec 'lto_module_is_object_file_for_target'(Path :: string(),Target_triple_prefix :: string()) -> 'bool'().
-'lto_module_is_object_file_for_target'(Path,Target_triple_prefix) ->
-	{'bool','lto_module_is_object_file_for_target_internal'(Path,Target_triple_prefix)}.
-'lto_module_is_object_file_for_target_internal'(_Path,_Target_triple_prefix) ->
-	nif_not_loaded.
-
-%% @doc Checks if a buffer is a loadable object file. 
--spec 'lto_module_is_object_file_in_memory'(Mem :: llvm_ptr(atom()),Length :: integer()) -> 'bool'().
-'lto_module_is_object_file_in_memory'({ptr,{'void',Mem}},Length) ->
-	{'bool','lto_module_is_object_file_in_memory_internal'(Mem,Length)}.
-'lto_module_is_object_file_in_memory_internal'(_Mem,_Length) ->
-	nif_not_loaded.
-
-%% @doc Checks if a buffer is a loadable object compiled for requested target. 
--spec 'lto_module_is_object_file_in_memory_for_target'(Mem :: llvm_ptr(atom()),Length :: integer(),Target_triple_prefix :: string()) -> 'bool'().
-'lto_module_is_object_file_in_memory_for_target'({ptr,{'void',Mem}},Length,Target_triple_prefix) ->
-	{'bool','lto_module_is_object_file_in_memory_for_target_internal'(Mem,Length,Target_triple_prefix)}.
-'lto_module_is_object_file_in_memory_for_target_internal'(_Mem,_Length,_Target_triple_prefix) ->
-	nif_not_loaded.
-
-%% @doc Loads an object file from disk. Returns NULL on error (check lto_get_error_message() for details). 
--spec 'lto_module_create'(Path :: string()) -> 'lto_module_t'().
-'lto_module_create'(Path) ->
-	{'lto_module_t','lto_module_create_internal'(Path)}.
-'lto_module_create_internal'(_Path) ->
-	nif_not_loaded.
-
-%% @doc Loads an object file from memory. Returns NULL on error (check lto_get_error_message() for details). 
--spec 'lto_module_create_from_memory'(Mem :: llvm_ptr(atom()),Length :: integer()) -> 'lto_module_t'().
-'lto_module_create_from_memory'({ptr,{'void',Mem}},Length) ->
-	{'lto_module_t','lto_module_create_from_memory_internal'(Mem,Length)}.
-'lto_module_create_from_memory_internal'(_Mem,_Length) ->
-	nif_not_loaded.
-
-%% @doc Frees all memory internally allocated by the module. Upon return the lto_module_t is no longer valid. 
--spec 'lto_module_dispose'(Mod :: 'lto_module_t'()) -> atom().
-'lto_module_dispose'({'lto_module_t',Mod}) ->
-	{atom,'lto_module_dispose_internal'(Mod)}.
-'lto_module_dispose_internal'(_Mod) ->
-	nif_not_loaded.
-
-%% @doc Returns triple string which the object module was compiled under. 
--spec 'lto_module_get_target_triple'(Mod :: 'lto_module_t'()) -> string().
-'lto_module_get_target_triple'({'lto_module_t',Mod}) ->
-	{string,'lto_module_get_target_triple_internal'(Mod)}.
-'lto_module_get_target_triple_internal'(_Mod) ->
-	nif_not_loaded.
-
-%% @doc Sets triple string with which the object will be codegened. 
--spec 'lto_module_set_target_triple'(Mod :: 'lto_module_t'(),Triple :: string()) -> atom().
-'lto_module_set_target_triple'({'lto_module_t',Mod},Triple) ->
-	{atom,'lto_module_set_target_triple_internal'(Mod,Triple)}.
-'lto_module_set_target_triple_internal'(_Mod,_Triple) ->
-	nif_not_loaded.
-
-%% @doc Returns the number of symbols in the object module. 
--spec 'lto_module_get_num_symbols'(Mod :: 'lto_module_t'()) -> integer().
-'lto_module_get_num_symbols'({'lto_module_t',Mod}) ->
-	{integer,'lto_module_get_num_symbols_internal'(Mod)}.
-'lto_module_get_num_symbols_internal'(_Mod) ->
-	nif_not_loaded.
-
-%% @doc Returns the name of the ith symbol in the object module. 
--spec 'lto_module_get_symbol_name'(Mod :: 'lto_module_t'(),Index :: integer()) -> string().
-'lto_module_get_symbol_name'({'lto_module_t',Mod},Index) ->
-	{string,'lto_module_get_symbol_name_internal'(Mod,Index)}.
-'lto_module_get_symbol_name_internal'(_Mod,_Index) ->
-	nif_not_loaded.
-
-%% @doc Returns the attributes of the ith symbol in the object module. 
--spec 'lto_module_get_symbol_attribute'(Mod :: 'lto_module_t'(),Index :: integer()) -> 'lto_symbol_attributes'().
-'lto_module_get_symbol_attribute'({'lto_module_t',Mod},Index) ->
-	{'lto_symbol_attributes','lto_module_get_symbol_attribute_internal'(Mod,Index)}.
-'lto_module_get_symbol_attribute_internal'(_Mod,_Index) ->
-	nif_not_loaded.
-
-%% @doc Instantiates a code generator. Returns NULL on error (check lto_get_error_message() for details). 
--spec 'lto_codegen_create'() -> 'lto_code_gen_t'().
-'lto_codegen_create'() ->
-	{'lto_code_gen_t','lto_codegen_create_internal'()}.
-'lto_codegen_create_internal'() ->
-	nif_not_loaded.
-
-%% @doc Frees all code generator and all memory it internally allocated. Upon return the lto_code_gen_t is no longer valid. 
--spec 'lto_codegen_dispose'(Code_gen :: 'lto_code_gen_t'()) -> atom().
-'lto_codegen_dispose'({'lto_code_gen_t',Code_gen}) ->
-	{atom,'lto_codegen_dispose_internal'(Code_gen)}.
-'lto_codegen_dispose_internal'(_Code_gen) ->
-	nif_not_loaded.
-
-%% @doc Add an object module to the set of modules for which code will be generated. Returns true on error (check lto_get_error_message() for details). 
--spec 'lto_codegen_add_module'(Cg :: 'lto_code_gen_t'(),Mod :: 'lto_module_t'()) -> 'bool'().
-'lto_codegen_add_module'({'lto_code_gen_t',Cg},{'lto_module_t',Mod}) ->
-	{'bool','lto_codegen_add_module_internal'(Cg,Mod)}.
-'lto_codegen_add_module_internal'(_Cg,_Mod) ->
-	nif_not_loaded.
-
-%% @doc Sets if debug info should be generated. Returns true on error (check lto_get_error_message() for details). 
--spec 'lto_codegen_set_debug_model'(Cg :: 'lto_code_gen_t'(),Dbg :: 'lto_debug_model'()) -> 'bool'().
-'lto_codegen_set_debug_model'({'lto_code_gen_t',Cg},{'lto_debug_model',Dbg}) ->
-	{'bool','lto_codegen_set_debug_model_internal'(Cg,Dbg)}.
-'lto_codegen_set_debug_model_internal'(_Cg,_Dbg) ->
-	nif_not_loaded.
-
-%% @doc Sets which PIC code model to generated. Returns true on error (check lto_get_error_message() for details). 
--spec 'lto_codegen_set_pic_model'(Cg :: 'lto_code_gen_t'(),Code_gen :: 'lto_codegen_model'()) -> 'bool'().
-'lto_codegen_set_pic_model'({'lto_code_gen_t',Cg},{'lto_codegen_model',Code_gen}) ->
-	{'bool','lto_codegen_set_pic_model_internal'(Cg,Code_gen)}.
-'lto_codegen_set_pic_model_internal'(_Cg,_Code_gen) ->
-	nif_not_loaded.
-
-%% @doc Sets the cpu to generate code for. 
--spec 'lto_codegen_set_cpu'(Cg :: 'lto_code_gen_t'(),Cpu :: string()) -> atom().
-'lto_codegen_set_cpu'({'lto_code_gen_t',Cg},Cpu) ->
-	{atom,'lto_codegen_set_cpu_internal'(Cg,Cpu)}.
-'lto_codegen_set_cpu_internal'(_Cg,_Cpu) ->
-	nif_not_loaded.
-
-%% @doc Sets the location of the assembler tool to run. If not set, libLTO will use gcc to invoke the assembler. 
--spec 'lto_codegen_set_assembler_path'(Cg :: 'lto_code_gen_t'(),Path :: string()) -> atom().
-'lto_codegen_set_assembler_path'({'lto_code_gen_t',Cg},Path) ->
-	{atom,'lto_codegen_set_assembler_path_internal'(Cg,Path)}.
-'lto_codegen_set_assembler_path_internal'(_Cg,_Path) ->
-	nif_not_loaded.
-
-%% @doc Sets extra arguments that libLTO should pass to the assembler. 
--spec 'lto_codegen_set_assembler_args'(Cg :: 'lto_code_gen_t'(),Args :: tuple(string()),Nargs :: integer()) -> atom().
-'lto_codegen_set_assembler_args'({'lto_code_gen_t',Cg},Args,Nargs) ->
-	{atom,'lto_codegen_set_assembler_args_internal'(Cg,Args,Nargs)}.
-'lto_codegen_set_assembler_args_internal'(_Cg,_Args,_Nargs) ->
-	nif_not_loaded.
-
-%% @doc Adds to a list of all global symbols that must exist in the final generated code. If a function is not listed, it might be inlined into every usage and optimized away. 
--spec 'lto_codegen_add_must_preserve_symbol'(Cg :: 'lto_code_gen_t'(),Symbol :: string()) -> atom().
-'lto_codegen_add_must_preserve_symbol'({'lto_code_gen_t',Cg},Symbol) ->
-	{atom,'lto_codegen_add_must_preserve_symbol_internal'(Cg,Symbol)}.
-'lto_codegen_add_must_preserve_symbol_internal'(_Cg,_Symbol) ->
-	nif_not_loaded.
-
-%% @doc Writes a new object file at the specified path that contains the merged contents of all modules added so far. Returns true on error (check lto_get_error_message() for details). 
--spec 'lto_codegen_write_merged_modules'(Cg :: 'lto_code_gen_t'(),Path :: string()) -> 'bool'().
-'lto_codegen_write_merged_modules'({'lto_code_gen_t',Cg},Path) ->
-	{'bool','lto_codegen_write_merged_modules_internal'(Cg,Path)}.
-'lto_codegen_write_merged_modules_internal'(_Cg,_Path) ->
-	nif_not_loaded.
-
-%% @doc Generates code for all added modules into one native object file. On sucess returns a pointer to a generated mach-o/ELF buffer and length set to the buffer size. The buffer is owned by the lto_code_gen_t and will be freed when lto_codegen_dispose() is called, or lto_codegen_compile() is called again. On failure, returns NULL (check lto_get_error_message() for details). 
--spec 'lto_codegen_compile'(Cg :: 'lto_code_gen_t'(),Length :: llvm_ptr(integer())) -> llvm_ptr(atom()).
-'lto_codegen_compile'({'lto_code_gen_t',Cg},{ptr,{'size_t',Length}}) ->
-	{'void *','lto_codegen_compile_internal'(Cg,Length)}.
-'lto_codegen_compile_internal'(_Cg,_Length) ->
-	nif_not_loaded.
-
-%% @doc Sets options to help debug codegen bugs. 
--spec 'lto_codegen_debug_options'(Cg :: 'lto_code_gen_t'(),String :: string()) -> atom().
-'lto_codegen_debug_options'({'lto_code_gen_t',Cg},String) ->
-	{atom,'lto_codegen_debug_options_internal'(Cg,String)}.
-'lto_codegen_debug_options_internal'(_Cg,_String) ->
-	nif_not_loaded.
-
-%% --- Stop generating from lto_8h.xml
-
-%% -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,41}}--
-
-%% @doc LLVMInitializeAllTargetInfos - The main program should call this function if it wants access to all available targets that LLVM is configured to support. 
--spec 'LLVMInitializeAllTargetInfos'() -> atom().
-'LLVMInitializeAllTargetInfos'() ->
-	{atom,'LLVMInitializeAllTargetInfos_internal'()}.
-'LLVMInitializeAllTargetInfos_internal'() ->
-	nif_not_loaded.
-
-%% @doc LLVMInitializeAllTargets - The main program should call this function if it wants to link in all available targets that LLVM is configured to support. 
--spec 'LLVMInitializeAllTargets'() -> atom().
-'LLVMInitializeAllTargets'() ->
-	{atom,'LLVMInitializeAllTargets_internal'()}.
-'LLVMInitializeAllTargets_internal'() ->
-	nif_not_loaded.
-
-%% @doc LLVMInitializeNativeTarget - The main program should call this function to initialize the native target corresponding to the host. This is useful for JIT applications to ensure that the target gets linked in correctly. 
--spec 'LLVMInitializeNativeTarget'() -> boolean().
-'LLVMInitializeNativeTarget'() ->
-	{boolean,'LLVMInitializeNativeTarget_internal'()}.
-'LLVMInitializeNativeTarget_internal'() ->
-	nif_not_loaded.
-
-%% @doc Creates target data from a target layout string. See the constructor llvm::TargetData::TargetData. 
--spec 'LLVMCreateTargetData'(StringRep :: string()) -> 'LLVMTargetDataRef'().
-'LLVMCreateTargetData'(StringRep) ->
-	{'LLVMTargetDataRef','LLVMCreateTargetData_internal'(StringRep)}.
-'LLVMCreateTargetData_internal'(_StringRep) ->
-	nif_not_loaded.
-
-%% @doc Adds target data information to a pass manager. This does not take ownership of the target data. See the method llvm::PassManagerBase::add. 
--spec 'LLVMAddTargetData'(TD :: 'LLVMTargetDataRef'(),PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddTargetData'({'LLVMTargetDataRef',TD},{'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddTargetData_internal'(TD,PM)}.
-'LLVMAddTargetData_internal'(_TD,_PM) ->
-	nif_not_loaded.
-
-%% @doc Converts target data to a target layout string. The string must be disposed with LLVMDisposeMessage. See the constructor llvm::TargetData::TargetData. 
--spec 'LLVMCopyStringRepOfTargetData'(TD :: 'LLVMTargetDataRef'()) -> string().
-'LLVMCopyStringRepOfTargetData'({'LLVMTargetDataRef',TD}) ->
-	{string,'LLVMCopyStringRepOfTargetData_internal'(TD)}.
-'LLVMCopyStringRepOfTargetData_internal'(_TD) ->
-	nif_not_loaded.
-
-%% @doc Returns the byte order of a target, either LLVMBigEndian or LLVMLittleEndian. See the method llvm::TargetData::isLittleEndian. 
--spec 'LLVMByteOrder'(TD :: 'LLVMTargetDataRef'()) -> 'LLVMByteOrdering'().
-'LLVMByteOrder'({'LLVMTargetDataRef',TD}) ->
-	{'LLVMByteOrdering','LLVMByteOrder_internal'(TD)}.
-'LLVMByteOrder_internal'(_TD) ->
-	nif_not_loaded.
-
-%% @doc Returns the pointer size in bytes for a target. See the method llvm::TargetData::getPointerSize. 
--spec 'LLVMPointerSize'(TD :: 'LLVMTargetDataRef'()) -> integer().
-'LLVMPointerSize'({'LLVMTargetDataRef',TD}) ->
-	{integer,'LLVMPointerSize_internal'(TD)}.
-'LLVMPointerSize_internal'(_TD) ->
-	nif_not_loaded.
-
-%% @doc Returns the integer type that is the same size as a pointer on a target. See the method llvm::TargetData::getIntPtrType. 
--spec 'LLVMIntPtrType'(TD :: 'LLVMTargetDataRef'()) -> 'LLVMTypeRef'().
-'LLVMIntPtrType'({'LLVMTargetDataRef',TD}) ->
-	{'LLVMTypeRef','LLVMIntPtrType_internal'(TD)}.
-'LLVMIntPtrType_internal'(_TD) ->
-	nif_not_loaded.
-
-%% @doc Computes the size of a type in bytes for a target. See the method llvm::TargetData::getTypeSizeInBits. 
--spec 'LLVMSizeOfTypeInBits'(TD :: 'LLVMTargetDataRef'(),TypeRef :: 'LLVMTypeRef'()) -> integer().
-'LLVMSizeOfTypeInBits'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',TypeRef}) ->
-	{integer,'LLVMSizeOfTypeInBits_internal'(TD,TypeRef)}.
-'LLVMSizeOfTypeInBits_internal'(_TD,_TypeRef) ->
-	nif_not_loaded.
-
-%% @doc Computes the storage size of a type in bytes for a target. See the method llvm::TargetData::getTypeStoreSize. 
--spec 'LLVMStoreSizeOfType'(TD :: 'LLVMTargetDataRef'(),TypeRef :: 'LLVMTypeRef'()) -> integer().
-'LLVMStoreSizeOfType'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',TypeRef}) ->
-	{integer,'LLVMStoreSizeOfType_internal'(TD,TypeRef)}.
-'LLVMStoreSizeOfType_internal'(_TD,_TypeRef) ->
-	nif_not_loaded.
-
-%% @doc Computes the ABI size of a type in bytes for a target. See the method llvm::TargetData::getTypeAllocSize. 
--spec 'LLVMABISizeOfType'(TD :: 'LLVMTargetDataRef'(),TypeRef :: 'LLVMTypeRef'()) -> integer().
-'LLVMABISizeOfType'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',TypeRef}) ->
-	{integer,'LLVMABISizeOfType_internal'(TD,TypeRef)}.
-'LLVMABISizeOfType_internal'(_TD,_TypeRef) ->
-	nif_not_loaded.
-
-%% @doc Computes the ABI alignment of a type in bytes for a target. See the method llvm::TargetData::getTypeABISize. 
--spec 'LLVMABIAlignmentOfType'(TD :: 'LLVMTargetDataRef'(),TypeRef :: 'LLVMTypeRef'()) -> integer().
-'LLVMABIAlignmentOfType'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',TypeRef}) ->
-	{integer,'LLVMABIAlignmentOfType_internal'(TD,TypeRef)}.
-'LLVMABIAlignmentOfType_internal'(_TD,_TypeRef) ->
-	nif_not_loaded.
-
-%% @doc Computes the call frame alignment of a type in bytes for a target. See the method llvm::TargetData::getTypeABISize. 
--spec 'LLVMCallFrameAlignmentOfType'(TD :: 'LLVMTargetDataRef'(),TypeRef :: 'LLVMTypeRef'()) -> integer().
-'LLVMCallFrameAlignmentOfType'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',TypeRef}) ->
-	{integer,'LLVMCallFrameAlignmentOfType_internal'(TD,TypeRef)}.
-'LLVMCallFrameAlignmentOfType_internal'(_TD,_TypeRef) ->
-	nif_not_loaded.
-
-%% @doc Computes the preferred alignment of a type in bytes for a target. See the method llvm::TargetData::getTypeABISize. 
--spec 'LLVMPreferredAlignmentOfType'(TD :: 'LLVMTargetDataRef'(),TypeRef :: 'LLVMTypeRef'()) -> integer().
-'LLVMPreferredAlignmentOfType'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',TypeRef}) ->
-	{integer,'LLVMPreferredAlignmentOfType_internal'(TD,TypeRef)}.
-'LLVMPreferredAlignmentOfType_internal'(_TD,_TypeRef) ->
-	nif_not_loaded.
-
-%% @doc Computes the preferred alignment of a global variable in bytes for a target. See the method llvm::TargetData::getPreferredAlignment. 
--spec 'LLVMPreferredAlignmentOfGlobal'(TD :: 'LLVMTargetDataRef'(),GlobalVar :: 'LLVMValueRef'()) -> integer().
-'LLVMPreferredAlignmentOfGlobal'({'LLVMTargetDataRef',TD},{'LLVMValueRef',GlobalVar}) ->
-	{integer,'LLVMPreferredAlignmentOfGlobal_internal'(TD,GlobalVar)}.
-'LLVMPreferredAlignmentOfGlobal_internal'(_TD,_GlobalVar) ->
-	nif_not_loaded.
-
-%% @doc Computes the structure element that contains the byte offset for a target. See the method llvm::StructLayout::getElementContainingOffset. 
--spec 'LLVMElementAtOffset'(TD :: 'LLVMTargetDataRef'(),StructTy :: 'LLVMTypeRef'(),Offset :: integer()) -> integer().
-'LLVMElementAtOffset'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',StructTy},Offset) ->
-	{integer,'LLVMElementAtOffset_internal'(TD,StructTy,Offset)}.
-'LLVMElementAtOffset_internal'(_TD,_StructTy,_Offset) ->
-	nif_not_loaded.
-
-%% @doc Computes the byte offset of the indexed struct element for a target. See the method llvm::StructLayout::getElementContainingOffset. 
--spec 'LLVMOffsetOfElement'(TD :: 'LLVMTargetDataRef'(),StructTy :: 'LLVMTypeRef'(),Element :: integer()) -> integer().
-'LLVMOffsetOfElement'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',StructTy},Element) ->
-	{integer,'LLVMOffsetOfElement_internal'(TD,StructTy,Element)}.
-'LLVMOffsetOfElement_internal'(_TD,_StructTy,_Element) ->
-	nif_not_loaded.
-
-%% @doc Struct layouts are speculatively cached. If a TargetDataRef is alive when types are being refined and removed, this method must be called whenever a struct type is removed to avoid a dangling pointer in this cache. See the method llvm::TargetData::InvalidateStructLayoutInfo. 
--spec 'LLVMInvalidateStructLayout'(TD :: 'LLVMTargetDataRef'(),StructTy :: 'LLVMTypeRef'()) -> atom().
-'LLVMInvalidateStructLayout'({'LLVMTargetDataRef',TD},{'LLVMTypeRef',StructTy}) ->
-	{atom,'LLVMInvalidateStructLayout_internal'(TD,StructTy)}.
-'LLVMInvalidateStructLayout_internal'(_TD,_StructTy) ->
-	nif_not_loaded.
-
-%% @doc Deallocates a TargetData. See the destructor llvm::TargetData::~TargetData. 
--spec 'LLVMDisposeTargetData'(TD :: 'LLVMTargetDataRef'()) -> atom().
-'LLVMDisposeTargetData'({'LLVMTargetDataRef',TD}) ->
-	{atom,'LLVMDisposeTargetData_internal'(TD)}.
-'LLVMDisposeTargetData_internal'(_TD) ->
-	nif_not_loaded.
-
-%% --- Stop generating from Target_8h.xml
-
-%% -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,40}}--
-
-%% @doc See llvm::createAggressiveDCEPass function. 
--spec 'LLVMAddAggressiveDCEPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddAggressiveDCEPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddAggressiveDCEPass_internal'(PM)}.
-'LLVMAddAggressiveDCEPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createCFGSimplificationPass function. 
--spec 'LLVMAddCFGSimplificationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddCFGSimplificationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddCFGSimplificationPass_internal'(PM)}.
-'LLVMAddCFGSimplificationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createDeadStoreEliminationPass function. 
--spec 'LLVMAddDeadStoreEliminationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddDeadStoreEliminationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddDeadStoreEliminationPass_internal'(PM)}.
-'LLVMAddDeadStoreEliminationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createGVNPass function. 
--spec 'LLVMAddGVNPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddGVNPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddGVNPass_internal'(PM)}.
-'LLVMAddGVNPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createIndVarSimplifyPass function. 
--spec 'LLVMAddIndVarSimplifyPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddIndVarSimplifyPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddIndVarSimplifyPass_internal'(PM)}.
-'LLVMAddIndVarSimplifyPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createInstructionCombiningPass function. 
--spec 'LLVMAddInstructionCombiningPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddInstructionCombiningPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddInstructionCombiningPass_internal'(PM)}.
-'LLVMAddInstructionCombiningPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createJumpThreadingPass function. 
--spec 'LLVMAddJumpThreadingPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddJumpThreadingPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddJumpThreadingPass_internal'(PM)}.
-'LLVMAddJumpThreadingPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createLICMPass function. 
--spec 'LLVMAddLICMPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddLICMPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddLICMPass_internal'(PM)}.
-'LLVMAddLICMPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createLoopDeletionPass function. 
--spec 'LLVMAddLoopDeletionPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddLoopDeletionPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddLoopDeletionPass_internal'(PM)}.
-'LLVMAddLoopDeletionPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createLoopRotatePass function. 
--spec 'LLVMAddLoopRotatePass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddLoopRotatePass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddLoopRotatePass_internal'(PM)}.
-'LLVMAddLoopRotatePass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createLoopUnrollPass function. 
--spec 'LLVMAddLoopUnrollPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddLoopUnrollPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddLoopUnrollPass_internal'(PM)}.
-'LLVMAddLoopUnrollPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createLoopUnswitchPass function. 
--spec 'LLVMAddLoopUnswitchPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddLoopUnswitchPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddLoopUnswitchPass_internal'(PM)}.
-'LLVMAddLoopUnswitchPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createMemCpyOptPass function. 
--spec 'LLVMAddMemCpyOptPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddMemCpyOptPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddMemCpyOptPass_internal'(PM)}.
-'LLVMAddMemCpyOptPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createPromoteMemoryToRegisterPass function. 
--spec 'LLVMAddPromoteMemoryToRegisterPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddPromoteMemoryToRegisterPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddPromoteMemoryToRegisterPass_internal'(PM)}.
-'LLVMAddPromoteMemoryToRegisterPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createReassociatePass function. 
--spec 'LLVMAddReassociatePass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddReassociatePass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddReassociatePass_internal'(PM)}.
-'LLVMAddReassociatePass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createSCCPPass function. 
--spec 'LLVMAddSCCPPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddSCCPPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddSCCPPass_internal'(PM)}.
-'LLVMAddSCCPPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createScalarReplAggregatesPass function. 
--spec 'LLVMAddScalarReplAggregatesPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddScalarReplAggregatesPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddScalarReplAggregatesPass_internal'(PM)}.
-'LLVMAddScalarReplAggregatesPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createScalarReplAggregatesPass function. 
--spec 'LLVMAddScalarReplAggregatesPassWithThreshold'(PM :: 'LLVMPassManagerRef'(),Threshold :: integer()) -> atom().
-'LLVMAddScalarReplAggregatesPassWithThreshold'({'LLVMPassManagerRef',PM},Threshold) ->
-	{atom,'LLVMAddScalarReplAggregatesPassWithThreshold_internal'(PM,Threshold)}.
-'LLVMAddScalarReplAggregatesPassWithThreshold_internal'(_PM,_Threshold) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createSimplifyLibCallsPass function. 
--spec 'LLVMAddSimplifyLibCallsPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddSimplifyLibCallsPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddSimplifyLibCallsPass_internal'(PM)}.
-'LLVMAddSimplifyLibCallsPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createTailCallEliminationPass function. 
--spec 'LLVMAddTailCallEliminationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddTailCallEliminationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddTailCallEliminationPass_internal'(PM)}.
-'LLVMAddTailCallEliminationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createConstantPropagationPass function. 
--spec 'LLVMAddConstantPropagationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddConstantPropagationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddConstantPropagationPass_internal'(PM)}.
-'LLVMAddConstantPropagationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::demotePromoteMemoryToRegisterPass function. 
--spec 'LLVMAddDemoteMemoryToRegisterPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddDemoteMemoryToRegisterPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddDemoteMemoryToRegisterPass_internal'(PM)}.
-'LLVMAddDemoteMemoryToRegisterPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createVerifierPass function. 
--spec 'LLVMAddVerifierPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddVerifierPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddVerifierPass_internal'(PM)}.
-'LLVMAddVerifierPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% --- Stop generating from Scalar_8h.xml
-
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,39}}--
-
-%% --- Stop generating from LinkTimeOptimizer_8h.xml
-
-%% -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,37}}--
-
-%% @doc 
--spec 'LLVMInitializeTransformUtils'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeTransformUtils'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeTransformUtils_internal'(R)}.
-'LLVMInitializeTransformUtils_internal'(_R) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMInitializeScalarOpts'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeScalarOpts'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeScalarOpts_internal'(R)}.
-'LLVMInitializeScalarOpts_internal'(_R) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMInitializeInstCombine'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeInstCombine'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeInstCombine_internal'(R)}.
-'LLVMInitializeInstCombine_internal'(_R) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMInitializeInstrumentation'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeInstrumentation'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeInstrumentation_internal'(R)}.
-'LLVMInitializeInstrumentation_internal'(_R) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMInitializeIPA'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeIPA'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeIPA_internal'(R)}.
-'LLVMInitializeIPA_internal'(_R) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMInitializeCodeGen'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeCodeGen'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeCodeGen_internal'(R)}.
-'LLVMInitializeCodeGen_internal'(_R) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMInitializeTarget'(R :: 'LLVMPassRegistryRef'()) -> atom().
-'LLVMInitializeTarget'({'LLVMPassRegistryRef',R}) ->
-	{atom,'LLVMInitializeTarget_internal'(R)}.
-'LLVMInitializeTarget_internal'(_R) ->
-	nif_not_loaded.
-
-%% --- Stop generating from Initialization_8h.xml
-
-%% -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,36}}--
-
-%% @doc See llvm::createArgumentPromotionPass function. 
--spec 'LLVMAddArgumentPromotionPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddArgumentPromotionPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddArgumentPromotionPass_internal'(PM)}.
-'LLVMAddArgumentPromotionPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createConstantMergePass function. 
--spec 'LLVMAddConstantMergePass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddConstantMergePass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddConstantMergePass_internal'(PM)}.
-'LLVMAddConstantMergePass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createDeadArgEliminationPass function. 
--spec 'LLVMAddDeadArgEliminationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddDeadArgEliminationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddDeadArgEliminationPass_internal'(PM)}.
-'LLVMAddDeadArgEliminationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createDeadTypeEliminationPass function. 
--spec 'LLVMAddDeadTypeEliminationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddDeadTypeEliminationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddDeadTypeEliminationPass_internal'(PM)}.
-'LLVMAddDeadTypeEliminationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createFunctionAttrsPass function. 
--spec 'LLVMAddFunctionAttrsPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddFunctionAttrsPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddFunctionAttrsPass_internal'(PM)}.
-'LLVMAddFunctionAttrsPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createFunctionInliningPass function. 
--spec 'LLVMAddFunctionInliningPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddFunctionInliningPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddFunctionInliningPass_internal'(PM)}.
-'LLVMAddFunctionInliningPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createGlobalDCEPass function. 
--spec 'LLVMAddGlobalDCEPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddGlobalDCEPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddGlobalDCEPass_internal'(PM)}.
-'LLVMAddGlobalDCEPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createGlobalOptimizerPass function. 
--spec 'LLVMAddGlobalOptimizerPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddGlobalOptimizerPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddGlobalOptimizerPass_internal'(PM)}.
-'LLVMAddGlobalOptimizerPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createIPConstantPropagationPass function. 
--spec 'LLVMAddIPConstantPropagationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddIPConstantPropagationPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddIPConstantPropagationPass_internal'(PM)}.
-'LLVMAddIPConstantPropagationPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createLowerSetJmpPass function. 
--spec 'LLVMAddLowerSetJmpPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddLowerSetJmpPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddLowerSetJmpPass_internal'(PM)}.
-'LLVMAddLowerSetJmpPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createPruneEHPass function. 
--spec 'LLVMAddPruneEHPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddPruneEHPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddPruneEHPass_internal'(PM)}.
-'LLVMAddPruneEHPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createIPSCCPPass function. 
--spec 'LLVMAddIPSCCPPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddIPSCCPPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddIPSCCPPass_internal'(PM)}.
-'LLVMAddIPSCCPPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createInternalizePass function. 
--spec 'LLVMAddInternalizePass'(PM :: 'LLVMPassManagerRef'(),AllButMain :: integer()) -> atom().
-'LLVMAddInternalizePass'({'LLVMPassManagerRef',PM},AllButMain) ->
-	{atom,'LLVMAddInternalizePass_internal'(PM,AllButMain)}.
-'LLVMAddInternalizePass_internal'(_PM,_AllButMain) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMAddRaiseAllocationsPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddRaiseAllocationsPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddRaiseAllocationsPass_internal'(PM)}.
-'LLVMAddRaiseAllocationsPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createStripDeadPrototypesPass function. 
--spec 'LLVMAddStripDeadPrototypesPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddStripDeadPrototypesPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddStripDeadPrototypesPass_internal'(PM)}.
-'LLVMAddStripDeadPrototypesPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% @doc See llvm::createStripSymbolsPass function. 
--spec 'LLVMAddStripSymbolsPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
-'LLVMAddStripSymbolsPass'({'LLVMPassManagerRef',PM}) ->
-	{atom,'LLVMAddStripSymbolsPass_internal'(PM)}.
-'LLVMAddStripSymbolsPass_internal'(_PM) ->
-	nif_not_loaded.
-
-%% --- Stop generating from IPO_8h.xml
-
-%% -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,35}}--
-
-%% @doc 
--spec 'LLVMLinkInJIT'() -> atom().
-'LLVMLinkInJIT'() ->
-	{atom,'LLVMLinkInJIT_internal'()}.
-'LLVMLinkInJIT_internal'() ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMLinkInInterpreter'() -> atom().
-'LLVMLinkInInterpreter'() ->
-	{atom,'LLVMLinkInInterpreter_internal'()}.
-'LLVMLinkInInterpreter_internal'() ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateGenericValueOfInt'(Ty :: 'LLVMTypeRef'(),N :: integer(),IsSigned :: boolean()) -> 'LLVMGenericValueRef'().
-'LLVMCreateGenericValueOfInt'({'LLVMTypeRef',Ty},N,IsSigned) ->
-	{'LLVMGenericValueRef','LLVMCreateGenericValueOfInt_internal'(Ty,N,IsSigned)}.
-'LLVMCreateGenericValueOfInt_internal'(_Ty,_N,_IsSigned) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateGenericValueOfPointer'(P :: llvm_ptr(atom())) -> 'LLVMGenericValueRef'().
-'LLVMCreateGenericValueOfPointer'({ptr,{'void',P}}) ->
-	{'LLVMGenericValueRef','LLVMCreateGenericValueOfPointer_internal'(P)}.
-'LLVMCreateGenericValueOfPointer_internal'(_P) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateGenericValueOfFloat'(Ty :: 'LLVMTypeRef'(),N :: float()) -> 'LLVMGenericValueRef'().
-'LLVMCreateGenericValueOfFloat'({'LLVMTypeRef',Ty},N) ->
-	{'LLVMGenericValueRef','LLVMCreateGenericValueOfFloat_internal'(Ty,N)}.
-'LLVMCreateGenericValueOfFloat_internal'(_Ty,_N) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGenericValueIntWidth'(GenValRef :: 'LLVMGenericValueRef'()) -> integer().
-'LLVMGenericValueIntWidth'({'LLVMGenericValueRef',GenValRef}) ->
-	{integer,'LLVMGenericValueIntWidth_internal'(GenValRef)}.
-'LLVMGenericValueIntWidth_internal'(_GenValRef) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGenericValueToInt'(GenVal :: 'LLVMGenericValueRef'(),IsSigned :: boolean()) -> integer().
-'LLVMGenericValueToInt'({'LLVMGenericValueRef',GenVal},IsSigned) ->
-	{integer,'LLVMGenericValueToInt_internal'(GenVal,IsSigned)}.
-'LLVMGenericValueToInt_internal'(_GenVal,_IsSigned) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGenericValueToPointer'(GenVal :: 'LLVMGenericValueRef'()) -> llvm_ptr(atom()).
-'LLVMGenericValueToPointer'({'LLVMGenericValueRef',GenVal}) ->
-	{'void *','LLVMGenericValueToPointer_internal'(GenVal)}.
-'LLVMGenericValueToPointer_internal'(_GenVal) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGenericValueToFloat'(TyRef :: 'LLVMTypeRef'(),GenVal :: 'LLVMGenericValueRef'()) -> float().
-'LLVMGenericValueToFloat'({'LLVMTypeRef',TyRef},{'LLVMGenericValueRef',GenVal}) ->
-	{float,'LLVMGenericValueToFloat_internal'(TyRef,GenVal)}.
-'LLVMGenericValueToFloat_internal'(_TyRef,_GenVal) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMDisposeGenericValue'(GenVal :: 'LLVMGenericValueRef'()) -> atom().
-'LLVMDisposeGenericValue'({'LLVMGenericValueRef',GenVal}) ->
-	{atom,'LLVMDisposeGenericValue_internal'(GenVal)}.
-'LLVMDisposeGenericValue_internal'(_GenVal) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateExecutionEngineForModule'(M :: 'LLVMModuleRef'()) -> boolean().
-'LLVMCreateExecutionEngineForModule'({'LLVMModuleRef',M}) ->
-	{Return, OutEE,OutError} = 'LLVMCreateExecutionEngineForModule_internal'(M),
-	{{boolean,Return},{'LLVMExecutionEngineRef',OutEE},{'char *',OutError}}.
-'LLVMCreateExecutionEngineForModule_internal'(_M) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateInterpreterForModule'(M :: 'LLVMModuleRef'()) -> boolean().
-'LLVMCreateInterpreterForModule'({'LLVMModuleRef',M}) ->
-	{Return, OutInterp,OutError} = 'LLVMCreateInterpreterForModule_internal'(M),
-	{{boolean,Return},{'LLVMExecutionEngineRef',OutInterp},{'char *',OutError}}.
-'LLVMCreateInterpreterForModule_internal'(_M) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateJITCompilerForModule'(M :: 'LLVMModuleRef'(),OptLevel :: integer()) -> boolean().
-'LLVMCreateJITCompilerForModule'({'LLVMModuleRef',M},OptLevel) ->
-	{Return, OutJIT,OutError} = 'LLVMCreateJITCompilerForModule_internal'(M,OptLevel),
-	{{boolean,Return},{'LLVMExecutionEngineRef',OutJIT},{'char *',OutError}}.
-'LLVMCreateJITCompilerForModule_internal'(_M,_OptLevel) ->
-	nif_not_loaded.
-
-%% @doc Deprecated: Use LLVMCreateExecutionEngineForModule instead. 
--spec 'LLVMCreateExecutionEngine'(MP :: 'LLVMModuleProviderRef'()) -> boolean().
-'LLVMCreateExecutionEngine'({'LLVMModuleProviderRef',MP}) ->
-	{Return, OutEE,OutError} = 'LLVMCreateExecutionEngine_internal'(MP),
-	{{boolean,Return},{'LLVMExecutionEngineRef',OutEE},{'char *',OutError}}.
-'LLVMCreateExecutionEngine_internal'(_MP) ->
-	nif_not_loaded.
-
-%% @doc Deprecated: Use LLVMCreateInterpreterForModule instead. 
--spec 'LLVMCreateInterpreter'(MP :: 'LLVMModuleProviderRef'()) -> boolean().
-'LLVMCreateInterpreter'({'LLVMModuleProviderRef',MP}) ->
-	{Return, OutInterp,OutError} = 'LLVMCreateInterpreter_internal'(MP),
-	{{boolean,Return},{'LLVMExecutionEngineRef',OutInterp},{'char *',OutError}}.
-'LLVMCreateInterpreter_internal'(_MP) ->
-	nif_not_loaded.
-
-%% @doc Deprecated: Use LLVMCreateJITCompilerForModule instead. 
--spec 'LLVMCreateJITCompiler'(MP :: 'LLVMModuleProviderRef'(),OptLevel :: integer()) -> boolean().
-'LLVMCreateJITCompiler'({'LLVMModuleProviderRef',MP},OptLevel) ->
-	{Return, OutJIT,OutError} = 'LLVMCreateJITCompiler_internal'(MP,OptLevel),
-	{{boolean,Return},{'LLVMExecutionEngineRef',OutJIT},{'char *',OutError}}.
-'LLVMCreateJITCompiler_internal'(_MP,_OptLevel) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMDisposeExecutionEngine'(EE :: 'LLVMExecutionEngineRef'()) -> atom().
-'LLVMDisposeExecutionEngine'({'LLVMExecutionEngineRef',EE}) ->
-	{atom,'LLVMDisposeExecutionEngine_internal'(EE)}.
-'LLVMDisposeExecutionEngine_internal'(_EE) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRunStaticConstructors'(EE :: 'LLVMExecutionEngineRef'()) -> atom().
-'LLVMRunStaticConstructors'({'LLVMExecutionEngineRef',EE}) ->
-	{atom,'LLVMRunStaticConstructors_internal'(EE)}.
-'LLVMRunStaticConstructors_internal'(_EE) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRunStaticDestructors'(EE :: 'LLVMExecutionEngineRef'()) -> atom().
-'LLVMRunStaticDestructors'({'LLVMExecutionEngineRef',EE}) ->
-	{atom,'LLVMRunStaticDestructors_internal'(EE)}.
-'LLVMRunStaticDestructors_internal'(_EE) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRunFunctionAsMain'(EE :: 'LLVMExecutionEngineRef'(),F :: 'LLVMValueRef'(),ArgC :: integer(),ArgV :: tuple(string()),EnvP :: tuple(string())) -> integer().
-'LLVMRunFunctionAsMain'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',F},ArgC,ArgV,EnvP) ->
-	{integer,'LLVMRunFunctionAsMain_internal'(EE,F,ArgC,ArgV,EnvP)}.
-'LLVMRunFunctionAsMain_internal'(_EE,_F,_ArgC,_ArgV,_EnvP) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRunFunction'(EE :: 'LLVMExecutionEngineRef'(),F :: 'LLVMValueRef'(),NumArgs :: integer(),Args :: tuple('LLVMGenericValueRef'())) -> 'LLVMGenericValueRef'().
-'LLVMRunFunction'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',F},NumArgs,Args) ->
-	{'LLVMGenericValueRef','LLVMRunFunction_internal'(EE,F,NumArgs,Args)}.
-'LLVMRunFunction_internal'(_EE,_F,_NumArgs,_Args) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMFreeMachineCodeForFunction'(EE :: 'LLVMExecutionEngineRef'(),F :: 'LLVMValueRef'()) -> atom().
-'LLVMFreeMachineCodeForFunction'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',F}) ->
-	{atom,'LLVMFreeMachineCodeForFunction_internal'(EE,F)}.
-'LLVMFreeMachineCodeForFunction_internal'(_EE,_F) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMAddModule'(EE :: 'LLVMExecutionEngineRef'(),M :: 'LLVMModuleRef'()) -> atom().
-'LLVMAddModule'({'LLVMExecutionEngineRef',EE},{'LLVMModuleRef',M}) ->
-	{atom,'LLVMAddModule_internal'(EE,M)}.
-'LLVMAddModule_internal'(_EE,_M) ->
-	nif_not_loaded.
-
-%% @doc Deprecated: Use LLVMAddModule instead. 
--spec 'LLVMAddModuleProvider'(EE :: 'LLVMExecutionEngineRef'(),MP :: 'LLVMModuleProviderRef'()) -> atom().
-'LLVMAddModuleProvider'({'LLVMExecutionEngineRef',EE},{'LLVMModuleProviderRef',MP}) ->
-	{atom,'LLVMAddModuleProvider_internal'(EE,MP)}.
-'LLVMAddModuleProvider_internal'(_EE,_MP) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRemoveModule'(EE :: 'LLVMExecutionEngineRef'(),M :: 'LLVMModuleRef'()) -> boolean().
-'LLVMRemoveModule'({'LLVMExecutionEngineRef',EE},{'LLVMModuleRef',M}) ->
-	{Return, OutMod,OutError} = 'LLVMRemoveModule_internal'(EE,M),
-	{{boolean,Return},{'LLVMModuleRef',OutMod},{'char *',OutError}}.
-'LLVMRemoveModule_internal'(_EE,_M) ->
-	nif_not_loaded.
-
-%% @doc Deprecated: Use LLVMRemoveModule instead. 
--spec 'LLVMRemoveModuleProvider'(EE :: 'LLVMExecutionEngineRef'(),MP :: 'LLVMModuleProviderRef'()) -> boolean().
-'LLVMRemoveModuleProvider'({'LLVMExecutionEngineRef',EE},{'LLVMModuleProviderRef',MP}) ->
-	{Return, OutMod,OutError} = 'LLVMRemoveModuleProvider_internal'(EE,MP),
-	{{boolean,Return},{'LLVMModuleRef',OutMod},{'char *',OutError}}.
-'LLVMRemoveModuleProvider_internal'(_EE,_MP) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMFindFunction'(EE :: 'LLVMExecutionEngineRef'(),Name :: string()) -> boolean().
-'LLVMFindFunction'({'LLVMExecutionEngineRef',EE},Name) ->
-	{Return, OutFn} = 'LLVMFindFunction_internal'(EE,Name),
-	{{boolean,Return},{'LLVMValueRef',OutFn}}.
-'LLVMFindFunction_internal'(_EE,_Name) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRecompileAndRelinkFunction'(EE :: 'LLVMExecutionEngineRef'(),Fn :: 'LLVMValueRef'()) -> llvm_ptr(atom()).
-'LLVMRecompileAndRelinkFunction'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',Fn}) ->
-	{'void *','LLVMRecompileAndRelinkFunction_internal'(EE,Fn)}.
-'LLVMRecompileAndRelinkFunction_internal'(_EE,_Fn) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGetExecutionEngineTargetData'(EE :: 'LLVMExecutionEngineRef'()) -> 'LLVMTargetDataRef'().
-'LLVMGetExecutionEngineTargetData'({'LLVMExecutionEngineRef',EE}) ->
-	{'LLVMTargetDataRef','LLVMGetExecutionEngineTargetData_internal'(EE)}.
-'LLVMGetExecutionEngineTargetData_internal'(_EE) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMAddGlobalMapping'(EE :: 'LLVMExecutionEngineRef'(),Global :: 'LLVMValueRef'(),Addr :: llvm_ptr(atom())) -> atom().
-'LLVMAddGlobalMapping'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',Global},{ptr,{'void',Addr}}) ->
-	{atom,'LLVMAddGlobalMapping_internal'(EE,Global,Addr)}.
-'LLVMAddGlobalMapping_internal'(_EE,_Global,_Addr) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGetPointerToGlobal'(EE :: 'LLVMExecutionEngineRef'(),Global :: 'LLVMValueRef'()) -> llvm_ptr(atom()).
-'LLVMGetPointerToGlobal'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',Global}) ->
-	{'void *','LLVMGetPointerToGlobal_internal'(EE,Global)}.
-'LLVMGetPointerToGlobal_internal'(_EE,_Global) ->
-	nif_not_loaded.
-
-%% --- Stop generating from ExecutionEngine_8h.xml
-
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,34}}--
-
-%% @doc Getting a disassemblerEDGetDisassembler Gets the disassembler for a given target. disassemblerA pointer whose target will be filled in with the disassembler. tripleIdentifies the target. Example: "x86_64-apple-darwin10" syntaxThe assembly syntax to use when decoding instructions. 0 on success; -1 otherwise. 
--spec 'EDGetDisassembler'(Disassembler :: llvm_ptr('EDDisassemblerRef'()),Triple :: string(),Syntax :: 'EDAssemblySyntax_t'()) -> integer().
-'EDGetDisassembler'({ptr,{'EDDisassemblerRef',Disassembler}},Triple,{'EDAssemblySyntax_t',Syntax}) ->
-	{integer,'EDGetDisassembler_internal'(Disassembler,Triple,Syntax)}.
-'EDGetDisassembler_internal'(_Disassembler,_Triple,_Syntax) ->
-	nif_not_loaded.
-
-%% @doc Generic architectural queriesEDGetRegisterName Gets the human-readable name for a given register. regNameA pointer whose target will be pointed at the name of the register. The name does not need to be deallocated and will be disassemblerThe disassembler to query for the name. regIDThe register identifier, as returned by EDRegisterTokenValue. 0 on success; -1 otherwise. 
--spec 'EDGetRegisterName'(RegName :: llvm_ptr(string()),Disassembler :: 'EDDisassemblerRef'(),RegID :: integer()) -> integer().
-'EDGetRegisterName'({ptr,{'string',RegName}},{'EDDisassemblerRef',Disassembler},RegID) ->
-	{integer,'EDGetRegisterName_internal'(RegName,Disassembler,RegID)}.
-'EDGetRegisterName_internal'(_RegName,_Disassembler,_RegID) ->
-	nif_not_loaded.
-
-%% @doc EDRegisterIsStackPointer Determines if a register is one of the platform's stack-pointer registers. disassemblerThe disassembler to query. regIDThe register identifier, as returned by EDRegisterTokenValue. 1 if true; 0 otherwise. 
--spec 'EDRegisterIsStackPointer'(Disassembler :: 'EDDisassemblerRef'(),RegID :: integer()) -> integer().
-'EDRegisterIsStackPointer'({'EDDisassemblerRef',Disassembler},RegID) ->
-	{integer,'EDRegisterIsStackPointer_internal'(Disassembler,RegID)}.
-'EDRegisterIsStackPointer_internal'(_Disassembler,_RegID) ->
-	nif_not_loaded.
-
-%% @doc EDRegisterIsProgramCounter Determines if a register is one of the platform's stack-pointer registers. disassemblerThe disassembler to query. regIDThe register identifier, as returned by EDRegisterTokenValue. 1 if true; 0 otherwise. 
--spec 'EDRegisterIsProgramCounter'(Disassembler :: 'EDDisassemblerRef'(),RegID :: integer()) -> integer().
-'EDRegisterIsProgramCounter'({'EDDisassemblerRef',Disassembler},RegID) ->
-	{integer,'EDRegisterIsProgramCounter_internal'(Disassembler,RegID)}.
-'EDRegisterIsProgramCounter_internal'(_Disassembler,_RegID) ->
-	nif_not_loaded.
-
-%% @doc Creating and querying instructionsEDCreateInst Gets a set of contiguous instructions from a disassembler. instsA pointer to an array that will be filled in with the instructions. Must have at least count entries. Entries not filled in will be set to NULL. countThe maximum number of instructions to fill in. disassemblerThe disassembler to use when decoding the instructions. byteReaderThe function to use when reading the instruction's machine code. addressThe address of the first byte of the instruction. argAn anonymous argument to be passed to byteReader. The number of instructions read on success; 0 otherwise. 
--spec 'EDCreateInsts'(Insts :: llvm_ptr('EDInstRef'()),Count :: integer(),Disassembler :: 'EDDisassemblerRef'(),ByteReader :: 'EDByteReaderCallback'(),Address :: integer(),Arg :: llvm_ptr(atom())) -> integer().
-'EDCreateInsts'({ptr,{'EDInstRef',Insts}},Count,{'EDDisassemblerRef',Disassembler},{'EDByteReaderCallback',ByteReader},Address,{ptr,{'void',Arg}}) ->
-	{integer,'EDCreateInsts_internal'(Insts,Count,Disassembler,ByteReader,Address,Arg)}.
-'EDCreateInsts_internal'(_Insts,_Count,_Disassembler,_ByteReader,_Address,_Arg) ->
-	nif_not_loaded.
-
-%% @doc EDReleaseInst Frees the memory for an instruction. The instruction can no longer be accessed after this call. instThe instruction to be freed. 
--spec 'EDReleaseInst'(Inst :: 'EDInstRef'()) -> atom().
-'EDReleaseInst'({'EDInstRef',Inst}) ->
-	{atom,'EDReleaseInst_internal'(Inst)}.
-'EDReleaseInst_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDInstByteSize instThe instruction to be queried. The number of bytes in the instruction's machine-code representation. 
--spec 'EDInstByteSize'(Inst :: 'EDInstRef'()) -> integer().
-'EDInstByteSize'({'EDInstRef',Inst}) ->
-	{integer,'EDInstByteSize_internal'(Inst)}.
-'EDInstByteSize_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDGetInstString Gets the disassembled text equivalent of the instruction. bufA pointer whose target will be filled in with a pointer to the string. (The string becomes invalid when the instruction is released.) instThe instruction to be queried. 0 on success; -1 otherwise. 
--spec 'EDGetInstString'(Buf :: llvm_ptr(string()),Inst :: 'EDInstRef'()) -> integer().
-'EDGetInstString'({ptr,{'string',Buf}},{'EDInstRef',Inst}) ->
-	{integer,'EDGetInstString_internal'(Buf,Inst)}.
-'EDGetInstString_internal'(_Buf,_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDInstIsBranch instThe instruction to be queried. 1 if the instruction is a branch instruction; 0 if it is some other type of instruction; -1 if there was an error. 
--spec 'EDInstIsBranch'(Inst :: 'EDInstRef'()) -> integer().
-'EDInstIsBranch'({'EDInstRef',Inst}) ->
-	{integer,'EDInstIsBranch_internal'(Inst)}.
-'EDInstIsBranch_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDInstIsMove instThe instruction to be queried. 1 if the instruction is a move instruction; 0 if it is some other type of instruction; -1 if there was an error. 
--spec 'EDInstIsMove'(Inst :: 'EDInstRef'()) -> integer().
-'EDInstIsMove'({'EDInstRef',Inst}) ->
-	{integer,'EDInstIsMove_internal'(Inst)}.
-'EDInstIsMove_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDBranchTargetID instThe instruction to be queried. The ID of the branch target operand, suitable for use with EDCopyOperand. -1 if no such operand exists. 
--spec 'EDBranchTargetID'(Inst :: 'EDInstRef'()) -> integer().
-'EDBranchTargetID'({'EDInstRef',Inst}) ->
-	{integer,'EDBranchTargetID_internal'(Inst)}.
-'EDBranchTargetID_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDMoveSourceID instThe instruction to be queried. The ID of the move source operand, suitable for use with EDCopyOperand. -1 if no such operand exists. 
--spec 'EDMoveSourceID'(Inst :: 'EDInstRef'()) -> integer().
-'EDMoveSourceID'({'EDInstRef',Inst}) ->
-	{integer,'EDMoveSourceID_internal'(Inst)}.
-'EDMoveSourceID_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDMoveTargetID instThe instruction to be queried. The ID of the move source operand, suitable for use with EDCopyOperand. -1 if no such operand exists. 
--spec 'EDMoveTargetID'(Inst :: 'EDInstRef'()) -> integer().
-'EDMoveTargetID'({'EDInstRef',Inst}) ->
-	{integer,'EDMoveTargetID_internal'(Inst)}.
-'EDMoveTargetID_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc Creating and querying tokensEDNumTokens instThe instruction to be queried. The number of tokens in the instruction, or -1 on error. 
--spec 'EDNumTokens'(Inst :: 'EDInstRef'()) -> integer().
-'EDNumTokens'({'EDInstRef',Inst}) ->
-	{integer,'EDNumTokens_internal'(Inst)}.
-'EDNumTokens_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDGetToken Retrieves a token from an instruction. The token is valid until the instruction is released. tokenA pointer to be filled in with the token. instThe instruction to be queried. indexThe index of the token in the instruction. 0 on success; -1 otherwise. 
--spec 'EDGetToken'(Token :: llvm_ptr('EDTokenRef'()),Inst :: 'EDInstRef'(),Index :: integer()) -> integer().
-'EDGetToken'({ptr,{'EDTokenRef',Token}},{'EDInstRef',Inst},Index) ->
-	{integer,'EDGetToken_internal'(Token,Inst,Index)}.
-'EDGetToken_internal'(_Token,_Inst,_Index) ->
-	nif_not_loaded.
-
-%% @doc EDGetTokenString Gets the disassembled text for a token. bufA pointer whose target will be filled in with a pointer to the string. (The string becomes invalid when the token is released.) tokenThe token to be queried. 0 on success; -1 otherwise. 
--spec 'EDGetTokenString'(Buf :: llvm_ptr(string()),Token :: 'EDTokenRef'()) -> integer().
-'EDGetTokenString'({ptr,{'string',Buf}},{'EDTokenRef',Token}) ->
-	{integer,'EDGetTokenString_internal'(Buf,Token)}.
-'EDGetTokenString_internal'(_Buf,_Token) ->
-	nif_not_loaded.
-
-%% @doc EDOperandIndexForToken Returns the index of the operand to which a token belongs. tokenThe token to be queried. The operand index on success; -1 otherwise 
--spec 'EDOperandIndexForToken'(Token :: 'EDTokenRef'()) -> integer().
-'EDOperandIndexForToken'({'EDTokenRef',Token}) ->
-	{integer,'EDOperandIndexForToken_internal'(Token)}.
-'EDOperandIndexForToken_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDTokenIsWhitespace tokenThe token to be queried. 1 if the token is whitespace; 0 if not; -1 on error. 
--spec 'EDTokenIsWhitespace'(Token :: 'EDTokenRef'()) -> integer().
-'EDTokenIsWhitespace'({'EDTokenRef',Token}) ->
-	{integer,'EDTokenIsWhitespace_internal'(Token)}.
-'EDTokenIsWhitespace_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDTokenIsPunctuation tokenThe token to be queried. 1 if the token is punctuation; 0 if not; -1 on error. 
--spec 'EDTokenIsPunctuation'(Token :: 'EDTokenRef'()) -> integer().
-'EDTokenIsPunctuation'({'EDTokenRef',Token}) ->
-	{integer,'EDTokenIsPunctuation_internal'(Token)}.
-'EDTokenIsPunctuation_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDTokenIsOpcode tokenThe token to be queried. 1 if the token is opcode; 0 if not; -1 on error. 
--spec 'EDTokenIsOpcode'(Token :: 'EDTokenRef'()) -> integer().
-'EDTokenIsOpcode'({'EDTokenRef',Token}) ->
-	{integer,'EDTokenIsOpcode_internal'(Token)}.
-'EDTokenIsOpcode_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDTokenIsLiteral tokenThe token to be queried. 1 if the token is a numeric literal; 0 if not; -1 on error. 
--spec 'EDTokenIsLiteral'(Token :: 'EDTokenRef'()) -> integer().
-'EDTokenIsLiteral'({'EDTokenRef',Token}) ->
-	{integer,'EDTokenIsLiteral_internal'(Token)}.
-'EDTokenIsLiteral_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDTokenIsRegister tokenThe token to be queried. 1 if the token identifies a register; 0 if not; -1 on error. 
--spec 'EDTokenIsRegister'(Token :: 'EDTokenRef'()) -> integer().
-'EDTokenIsRegister'({'EDTokenRef',Token}) ->
-	{integer,'EDTokenIsRegister_internal'(Token)}.
-'EDTokenIsRegister_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDTokenIsNegativeLiteral tokenThe token to be queried. 1 if the token is a negative signed literal; 0 if not; -1 on error. 
--spec 'EDTokenIsNegativeLiteral'(Token :: 'EDTokenRef'()) -> integer().
-'EDTokenIsNegativeLiteral'({'EDTokenRef',Token}) ->
-	{integer,'EDTokenIsNegativeLiteral_internal'(Token)}.
-'EDTokenIsNegativeLiteral_internal'(_Token) ->
-	nif_not_loaded.
-
-%% @doc EDLiteralTokenAbsoluteValue valueA pointer whose target will be filled in with the absolute value of the literal. tokenThe token to be queried. 0 on success; -1 otherwise. 
--spec 'EDLiteralTokenAbsoluteValue'(Value :: llvm_ptr(integer()),Token :: 'EDTokenRef'()) -> integer().
-'EDLiteralTokenAbsoluteValue'({ptr,{'uint64_t',Value}},{'EDTokenRef',Token}) ->
-	{integer,'EDLiteralTokenAbsoluteValue_internal'(Value,Token)}.
-'EDLiteralTokenAbsoluteValue_internal'(_Value,_Token) ->
-	nif_not_loaded.
-
-%% @doc EDRegisterTokenValue registerIDA pointer whose target will be filled in with the LLVM register identifier for the token. tokenThe token to be queried. 0 on success; -1 otherwise. 
--spec 'EDRegisterTokenValue'(RegisterID :: llvm_ptr(integer()),Token :: 'EDTokenRef'()) -> integer().
-'EDRegisterTokenValue'({ptr,{'unsigned',RegisterID}},{'EDTokenRef',Token}) ->
-	{integer,'EDRegisterTokenValue_internal'(RegisterID,Token)}.
-'EDRegisterTokenValue_internal'(_RegisterID,_Token) ->
-	nif_not_loaded.
-
-%% @doc Creating and querying operandsEDNumOperands instThe instruction to be queried. The number of operands in the instruction, or -1 on error. 
--spec 'EDNumOperands'(Inst :: 'EDInstRef'()) -> integer().
-'EDNumOperands'({'EDInstRef',Inst}) ->
-	{integer,'EDNumOperands_internal'(Inst)}.
-'EDNumOperands_internal'(_Inst) ->
-	nif_not_loaded.
-
-%% @doc EDGetOperand Retrieves an operand from an instruction. The operand is valid until the instruction is released. operandA pointer to be filled in with the operand. instThe instruction to be queried. indexThe index of the operand in the instruction. 0 on success; -1 otherwise. 
--spec 'EDGetOperand'(Operand :: llvm_ptr('EDOperandRef'()),Inst :: 'EDInstRef'(),Index :: integer()) -> integer().
-'EDGetOperand'({ptr,{'EDOperandRef',Operand}},{'EDInstRef',Inst},Index) ->
-	{integer,'EDGetOperand_internal'(Operand,Inst,Index)}.
-'EDGetOperand_internal'(_Operand,_Inst,_Index) ->
-	nif_not_loaded.
-
-%% @doc EDOperandIsRegister operandThe operand to be queried. 1 if the operand names a register; 0 if not; -1 on error. 
--spec 'EDOperandIsRegister'(Operand :: 'EDOperandRef'()) -> integer().
-'EDOperandIsRegister'({'EDOperandRef',Operand}) ->
-	{integer,'EDOperandIsRegister_internal'(Operand)}.
-'EDOperandIsRegister_internal'(_Operand) ->
-	nif_not_loaded.
-
-%% @doc EDOperandIsImmediate operandThe operand to be queried. 1 if the operand specifies an immediate value; 0 if not; -1 on error. 
--spec 'EDOperandIsImmediate'(Operand :: 'EDOperandRef'()) -> integer().
-'EDOperandIsImmediate'({'EDOperandRef',Operand}) ->
-	{integer,'EDOperandIsImmediate_internal'(Operand)}.
-'EDOperandIsImmediate_internal'(_Operand) ->
-	nif_not_loaded.
-
-%% @doc EDOperandIsMemory operandThe operand to be queried. 1 if the operand specifies a location in memory; 0 if not; -1 on error. 
--spec 'EDOperandIsMemory'(Operand :: 'EDOperandRef'()) -> integer().
-'EDOperandIsMemory'({'EDOperandRef',Operand}) ->
-	{integer,'EDOperandIsMemory_internal'(Operand)}.
-'EDOperandIsMemory_internal'(_Operand) ->
-	nif_not_loaded.
-
-%% @doc EDRegisterOperandValue valueA pointer whose target will be filled in with the LLVM register ID of the register named by the operand. operandThe operand to be queried. 0 on success; -1 otherwise. 
--spec 'EDRegisterOperandValue'(Value :: llvm_ptr(integer()),Operand :: 'EDOperandRef'()) -> integer().
-'EDRegisterOperandValue'({ptr,{'unsigned',Value}},{'EDOperandRef',Operand}) ->
-	{integer,'EDRegisterOperandValue_internal'(Value,Operand)}.
-'EDRegisterOperandValue_internal'(_Value,_Operand) ->
-	nif_not_loaded.
-
-%% @doc EDImmediateOperandValue valueA pointer whose target will be filled in with the value of the immediate. operandThe operand to be queried. 0 on success; -1 otherwise. 
--spec 'EDImmediateOperandValue'(Value :: llvm_ptr(integer()),Operand :: 'EDOperandRef'()) -> integer().
-'EDImmediateOperandValue'({ptr,{'uint64_t',Value}},{'EDOperandRef',Operand}) ->
-	{integer,'EDImmediateOperandValue_internal'(Value,Operand)}.
-'EDImmediateOperandValue_internal'(_Value,_Operand) ->
-	nif_not_loaded.
-
-%% @doc EDEvaluateOperand Evaluates an operand using a client-supplied register state accessor. Register operands are evaluated by reading the value of the register; immediate operands are evaluated by reporting the immediate value; memory operands are evaluated by computing the target address (with only those relocations applied that were already applied to the original bytes). resultA pointer whose target is to be filled with the result of evaluating the operand. operandThe operand to be evaluated. regReaderThe function to use when reading registers from the register state. argAn anonymous argument for client use. 0 if the operand could be evaluated; -1 otherwise. 
--spec 'EDEvaluateOperand'(Result :: llvm_ptr(integer()),Operand :: 'EDOperandRef'(),RegReader :: 'EDRegisterReaderCallback'(),Arg :: llvm_ptr(atom())) -> integer().
-'EDEvaluateOperand'({ptr,{'uint64_t',Result}},{'EDOperandRef',Operand},{'EDRegisterReaderCallback',RegReader},{ptr,{'void',Arg}}) ->
-	{integer,'EDEvaluateOperand_internal'(Result,Operand,RegReader,Arg)}.
-'EDEvaluateOperand_internal'(_Result,_Operand,_RegReader,_Arg) ->
-	nif_not_loaded.
-
-%% --- Stop generating from EnhancedDisassembly_8h.xml
-
-%% -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
 
 %% @doc 
 -spec 'LLVMDisposeMessage'(Message :: string()) -> atom().
@@ -2022,34 +662,6 @@ load_my_nifs() ->
 'LLVMSetTarget_internal'(_M,_Triple) ->
 	nif_not_loaded.
 
-%% @doc See Module::addTypeName. 
--spec 'LLVMAddTypeName'(M :: 'LLVMModuleRef'(),Name :: string(),Ty :: 'LLVMTypeRef'()) -> boolean().
-'LLVMAddTypeName'({'LLVMModuleRef',M},Name,{'LLVMTypeRef',Ty}) ->
-	{boolean,'LLVMAddTypeName_internal'(M,Name,Ty)}.
-'LLVMAddTypeName_internal'(_M,_Name,_Ty) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMDeleteTypeName'(M :: 'LLVMModuleRef'(),Name :: string()) -> atom().
-'LLVMDeleteTypeName'({'LLVMModuleRef',M},Name) ->
-	{atom,'LLVMDeleteTypeName_internal'(M,Name)}.
-'LLVMDeleteTypeName_internal'(_M,_Name) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGetTypeByName'(M :: 'LLVMModuleRef'(),Name :: string()) -> 'LLVMTypeRef'().
-'LLVMGetTypeByName'({'LLVMModuleRef',M},Name) ->
-	{'LLVMTypeRef','LLVMGetTypeByName_internal'(M,Name)}.
-'LLVMGetTypeByName_internal'(_M,_Name) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGetTypeName'(M :: 'LLVMModuleRef'(),Ty :: 'LLVMTypeRef'()) -> string().
-'LLVMGetTypeName'({'LLVMModuleRef',M},{'LLVMTypeRef',Ty}) ->
-	{string,'LLVMGetTypeName_internal'(M,Ty)}.
-'LLVMGetTypeName_internal'(_M,_Ty) ->
-	nif_not_loaded.
-
 %% @doc See Module::dump. 
 -spec 'LLVMDumpModule'(M :: 'LLVMModuleRef'()) -> atom().
 'LLVMDumpModule'({'LLVMModuleRef',M}) ->
@@ -2076,6 +688,13 @@ load_my_nifs() ->
 'LLVMGetTypeKind'({'LLVMTypeRef',Ty}) ->
 	{'LLVMTypeKind','LLVMGetTypeKind_internal'(Ty)}.
 'LLVMGetTypeKind_internal'(_Ty) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMTypeIsSized'(Ty :: 'LLVMTypeRef'()) -> boolean().
+'LLVMTypeIsSized'({'LLVMTypeRef',Ty}) ->
+	{boolean,'LLVMTypeIsSized_internal'(Ty)}.
+'LLVMTypeIsSized_internal'(_Ty) ->
 	nif_not_loaded.
 
 %% @doc See llvm::LLVMType::getContext. 
@@ -2296,6 +915,27 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMStructCreateNamed'(C :: 'LLVMContextRef'(),Name :: string()) -> 'LLVMTypeRef'().
+'LLVMStructCreateNamed'({'LLVMContextRef',C},Name) ->
+	{'LLVMTypeRef','LLVMStructCreateNamed_internal'(C,Name)}.
+'LLVMStructCreateNamed_internal'(_C,_Name) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetStructName'(Ty :: 'LLVMTypeRef'()) -> string().
+'LLVMGetStructName'({'LLVMTypeRef',Ty}) ->
+	{string,'LLVMGetStructName_internal'(Ty)}.
+'LLVMGetStructName_internal'(_Ty) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMStructSetBody'(StructTy :: 'LLVMTypeRef'(),ElementTypes :: llvm_ptr('LLVMTypeRef'()),ElementCount :: integer(),Packed :: boolean()) -> atom().
+'LLVMStructSetBody'({'LLVMTypeRef',StructTy},{ptr,{'LLVMTypeRef',ElementTypes}},ElementCount,Packed) ->
+	{atom,'LLVMStructSetBody_internal'(StructTy,ElementTypes,ElementCount,Packed)}.
+'LLVMStructSetBody_internal'(_StructTy,_ElementTypes,_ElementCount,_Packed) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMCountStructElementTypes'(StructTy :: 'LLVMTypeRef'()) -> integer().
 'LLVMCountStructElementTypes'({'LLVMTypeRef',StructTy}) ->
 	{integer,'LLVMCountStructElementTypes_internal'(StructTy)}.
@@ -2314,6 +954,20 @@ load_my_nifs() ->
 'LLVMIsPackedStruct'({'LLVMTypeRef',StructTy}) ->
 	{boolean,'LLVMIsPackedStruct_internal'(StructTy)}.
 'LLVMIsPackedStruct_internal'(_StructTy) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMIsOpaqueStruct'(StructTy :: 'LLVMTypeRef'()) -> boolean().
+'LLVMIsOpaqueStruct'({'LLVMTypeRef',StructTy}) ->
+	{boolean,'LLVMIsOpaqueStruct_internal'(StructTy)}.
+'LLVMIsOpaqueStruct_internal'(_StructTy) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetTypeByName'(M :: 'LLVMModuleRef'(),Name :: string()) -> 'LLVMTypeRef'().
+'LLVMGetTypeByName'({'LLVMModuleRef',M},Name) ->
+	{'LLVMTypeRef','LLVMGetTypeByName_internal'(M,Name)}.
+'LLVMGetTypeByName_internal'(_M,_Name) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -2380,13 +1034,6 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
--spec 'LLVMOpaqueTypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
-'LLVMOpaqueTypeInContext'({'LLVMContextRef',C}) ->
-	{'LLVMTypeRef','LLVMOpaqueTypeInContext_internal'(C)}.
-'LLVMOpaqueTypeInContext_internal'(_C) ->
-	nif_not_loaded.
-
-%% @doc 
 -spec 'LLVMX86MMXTypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
 'LLVMX86MMXTypeInContext'({'LLVMContextRef',C}) ->
 	{'LLVMTypeRef','LLVMX86MMXTypeInContext_internal'(C)}.
@@ -2408,45 +1055,10 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
--spec 'LLVMOpaqueType'() -> 'LLVMTypeRef'().
-'LLVMOpaqueType'() ->
-	{'LLVMTypeRef','LLVMOpaqueType_internal'()}.
-'LLVMOpaqueType_internal'() ->
-	nif_not_loaded.
-
-%% @doc 
 -spec 'LLVMX86MMXType'() -> 'LLVMTypeRef'().
 'LLVMX86MMXType'() ->
 	{'LLVMTypeRef','LLVMX86MMXType_internal'()}.
 'LLVMX86MMXType_internal'() ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMCreateTypeHandle'(PotentiallyAbstractTy :: 'LLVMTypeRef'()) -> 'LLVMTypeHandleRef'().
-'LLVMCreateTypeHandle'({'LLVMTypeRef',PotentiallyAbstractTy}) ->
-	{'LLVMTypeHandleRef','LLVMCreateTypeHandle_internal'(PotentiallyAbstractTy)}.
-'LLVMCreateTypeHandle_internal'(_PotentiallyAbstractTy) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMRefineType'(AbstractTy :: 'LLVMTypeRef'(),ConcreteTy :: 'LLVMTypeRef'()) -> atom().
-'LLVMRefineType'({'LLVMTypeRef',AbstractTy},{'LLVMTypeRef',ConcreteTy}) ->
-	{atom,'LLVMRefineType_internal'(AbstractTy,ConcreteTy)}.
-'LLVMRefineType_internal'(_AbstractTy,_ConcreteTy) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMResolveTypeHandle'(TypeHandle :: 'LLVMTypeHandleRef'()) -> 'LLVMTypeRef'().
-'LLVMResolveTypeHandle'({'LLVMTypeHandleRef',TypeHandle}) ->
-	{'LLVMTypeRef','LLVMResolveTypeHandle_internal'(TypeHandle)}.
-'LLVMResolveTypeHandle_internal'(_TypeHandle) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMDisposeTypeHandle'(TypeHandle :: 'LLVMTypeHandleRef'()) -> atom().
-'LLVMDisposeTypeHandle'({'LLVMTypeHandleRef',TypeHandle}) ->
-	{atom,'LLVMDisposeTypeHandle_internal'(TypeHandle)}.
-'LLVMDisposeTypeHandle_internal'(_TypeHandle) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -2527,6 +1139,20 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMIsAMDNode'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsAMDNode'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsAMDNode_internal'(Val)}.
+'LLVMIsAMDNode_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMIsAMDString'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsAMDString'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsAMDString_internal'(Val)}.
+'LLVMIsAMDString_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMIsAUser'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
 'LLVMIsAUser'({'LLVMValueRef',Val}) ->
 	{'LLVMValueRef','LLVMIsAUser_internal'(Val)}.
@@ -2538,6 +1164,13 @@ load_my_nifs() ->
 'LLVMIsAConstant'({'LLVMValueRef',Val}) ->
 	{'LLVMValueRef','LLVMIsAConstant_internal'(Val)}.
 'LLVMIsAConstant_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMIsABlockAddress'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsABlockAddress'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsABlockAddress_internal'(Val)}.
+'LLVMIsABlockAddress_internal'(_Val) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -2674,6 +1307,13 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMIsAEHExceptionInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsAEHExceptionInst'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsAEHExceptionInst_internal'(Val)}.
+'LLVMIsAEHExceptionInst_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMIsAEHSelectorInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
 'LLVMIsAEHSelectorInst'({'LLVMValueRef',Val}) ->
 	{'LLVMValueRef','LLVMIsAEHSelectorInst_internal'(Val)}.
@@ -2758,6 +1398,13 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMIsALandingPadInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsALandingPadInst'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsALandingPadInst_internal'(Val)}.
+'LLVMIsALandingPadInst_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMIsAPHINode'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
 'LLVMIsAPHINode'({'LLVMValueRef',Val}) ->
 	{'LLVMValueRef','LLVMIsAPHINode_internal'(Val)}.
@@ -2800,6 +1447,13 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMIsAIndirectBrInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsAIndirectBrInst'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsAIndirectBrInst_internal'(Val)}.
+'LLVMIsAIndirectBrInst_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMIsAInvokeInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
 'LLVMIsAInvokeInst'({'LLVMValueRef',Val}) ->
 	{'LLVMValueRef','LLVMIsAInvokeInst_internal'(Val)}.
@@ -2828,10 +1482,10 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
--spec 'LLVMIsAUnwindInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
-'LLVMIsAUnwindInst'({'LLVMValueRef',Val}) ->
-	{'LLVMValueRef','LLVMIsAUnwindInst_internal'(Val)}.
-'LLVMIsAUnwindInst_internal'(_Val) ->
+-spec 'LLVMIsAResumeInst'(Val :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMIsAResumeInst'({'LLVMValueRef',Val}) ->
+	{'LLVMValueRef','LLVMIsAResumeInst_internal'(Val)}.
+'LLVMIsAResumeInst_internal'(_Val) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -3087,17 +1741,31 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMGetMDString'(V :: 'LLVMValueRef'(),Len :: llvm_ptr(integer())) -> string().
+'LLVMGetMDString'({'LLVMValueRef',V},{ptr,{'unsigned',Len}}) ->
+	{string,'LLVMGetMDString_internal'(V,Len)}.
+'LLVMGetMDString_internal'(_V,_Len) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetNamedMetadataNumOperands'(M :: 'LLVMModuleRef'(),Name :: string()) -> integer().
+'LLVMGetNamedMetadataNumOperands'({'LLVMModuleRef',M},Name) ->
+	{integer,'LLVMGetNamedMetadataNumOperands_internal'(M,Name)}.
+'LLVMGetNamedMetadataNumOperands_internal'(_M,_Name) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetNamedMetadataOperands'(M :: 'LLVMModuleRef'(),Name :: string(),Dest :: llvm_ptr('LLVMValueRef'())) -> atom().
+'LLVMGetNamedMetadataOperands'({'LLVMModuleRef',M},Name,{ptr,{'LLVMValueRef',Dest}}) ->
+	{atom,'LLVMGetNamedMetadataOperands_internal'(M,Name,Dest)}.
+'LLVMGetNamedMetadataOperands_internal'(_M,_Name,_Dest) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMConstInt'(IntTy :: 'LLVMTypeRef'(),N :: integer(),SignExtend :: boolean()) -> 'LLVMValueRef'().
 'LLVMConstInt'({'LLVMTypeRef',IntTy},N,SignExtend) ->
 	{'LLVMValueRef','LLVMConstInt_internal'(IntTy,N,SignExtend)}.
 'LLVMConstInt_internal'(_IntTy,_N,_SignExtend) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMConstIntOfArbitraryPrecision'(IntTy :: 'LLVMTypeRef'(),NumWords :: integer(),Words :: integer()) -> 'LLVMValueRef'().
-'LLVMConstIntOfArbitraryPrecision'({'LLVMTypeRef',IntTy},NumWords,Words) ->
-	{'LLVMValueRef','LLVMConstIntOfArbitraryPrecision_internal'(IntTy,NumWords,Words)}.
-'LLVMConstIntOfArbitraryPrecision_internal'(_IntTy,_NumWords,_Words) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -3182,6 +1850,13 @@ load_my_nifs() ->
 'LLVMConstStruct'(ConstantVals,Count,Packed) ->
 	{'LLVMValueRef','LLVMConstStruct_internal'(ConstantVals,Count,Packed)}.
 'LLVMConstStruct_internal'(_ConstantVals,_Count,_Packed) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMConstNamedStruct'(StructTy :: 'LLVMTypeRef'(),ConstantVals :: llvm_ptr('LLVMValueRef'()),Count :: integer()) -> 'LLVMValueRef'().
+'LLVMConstNamedStruct'({'LLVMTypeRef',StructTy},{ptr,{'LLVMValueRef',ConstantVals}},Count) ->
+	{'LLVMValueRef','LLVMConstNamedStruct_internal'(StructTy,ConstantVals,Count)}.
+'LLVMConstNamedStruct_internal'(_StructTy,_ConstantVals,_Count) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -4025,6 +2700,13 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMGetBasicBlockTerminator'(BB :: 'LLVMBasicBlockRef'()) -> 'LLVMValueRef'().
+'LLVMGetBasicBlockTerminator'({'LLVMBasicBlockRef',BB}) ->
+	{'LLVMValueRef','LLVMGetBasicBlockTerminator_internal'(BB)}.
+'LLVMGetBasicBlockTerminator_internal'(_BB) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMCountBasicBlocks'(Fn :: 'LLVMValueRef'()) -> integer().
 'LLVMCountBasicBlocks'({'LLVMValueRef',Fn}) ->
 	{integer,'LLVMCountBasicBlocks_internal'(Fn)}.
@@ -4109,6 +2791,13 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMRemoveBasicBlockFromParent'(BB :: 'LLVMBasicBlockRef'()) -> atom().
+'LLVMRemoveBasicBlockFromParent'({'LLVMBasicBlockRef',BB}) ->
+	{atom,'LLVMRemoveBasicBlockFromParent_internal'(BB)}.
+'LLVMRemoveBasicBlockFromParent_internal'(_BB) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMMoveBasicBlockBefore'(BB :: 'LLVMBasicBlockRef'(),MovePos :: 'LLVMBasicBlockRef'()) -> atom().
 'LLVMMoveBasicBlockBefore'({'LLVMBasicBlockRef',BB},{'LLVMBasicBlockRef',MovePos}) ->
 	{atom,'LLVMMoveBasicBlockBefore_internal'(BB,MovePos)}.
@@ -4120,13 +2809,6 @@ load_my_nifs() ->
 'LLVMMoveBasicBlockAfter'({'LLVMBasicBlockRef',BB},{'LLVMBasicBlockRef',MovePos}) ->
 	{atom,'LLVMMoveBasicBlockAfter_internal'(BB,MovePos)}.
 'LLVMMoveBasicBlockAfter_internal'(_BB,_MovePos) ->
-	nif_not_loaded.
-
-%% @doc 
--spec 'LLVMGetInstructionParent'(Inst :: 'LLVMValueRef'()) -> 'LLVMBasicBlockRef'().
-'LLVMGetInstructionParent'({'LLVMValueRef',Inst}) ->
-	{'LLVMBasicBlockRef','LLVMGetInstructionParent_internal'(Inst)}.
-'LLVMGetInstructionParent_internal'(_Inst) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -4144,6 +2826,13 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMGetInstructionParent'(Inst :: 'LLVMValueRef'()) -> 'LLVMBasicBlockRef'().
+'LLVMGetInstructionParent'({'LLVMValueRef',Inst}) ->
+	{'LLVMBasicBlockRef','LLVMGetInstructionParent_internal'(Inst)}.
+'LLVMGetInstructionParent_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMGetNextInstruction'(Inst :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
 'LLVMGetNextInstruction'({'LLVMValueRef',Inst}) ->
 	{'LLVMValueRef','LLVMGetNextInstruction_internal'(Inst)}.
@@ -4155,6 +2844,27 @@ load_my_nifs() ->
 'LLVMGetPreviousInstruction'({'LLVMValueRef',Inst}) ->
 	{'LLVMValueRef','LLVMGetPreviousInstruction_internal'(Inst)}.
 'LLVMGetPreviousInstruction_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInstructionEraseFromParent'(Inst :: 'LLVMValueRef'()) -> atom().
+'LLVMInstructionEraseFromParent'({'LLVMValueRef',Inst}) ->
+	{atom,'LLVMInstructionEraseFromParent_internal'(Inst)}.
+'LLVMInstructionEraseFromParent_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetInstructionOpcode'(Inst :: 'LLVMValueRef'()) -> 'LLVMOpcode'().
+'LLVMGetInstructionOpcode'({'LLVMValueRef',Inst}) ->
+	{'LLVMOpcode','LLVMGetInstructionOpcode_internal'(Inst)}.
+'LLVMGetInstructionOpcode_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetICmpPredicate'(Inst :: 'LLVMValueRef'()) -> 'LLVMIntPredicate'().
+'LLVMGetICmpPredicate'({'LLVMValueRef',Inst}) ->
+	{'LLVMIntPredicate','LLVMGetICmpPredicate_internal'(Inst)}.
+'LLVMGetICmpPredicate_internal'(_Inst) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -4204,6 +2914,13 @@ load_my_nifs() ->
 'LLVMSetTailCall'({'LLVMValueRef',CallInst},IsTailCall) ->
 	{atom,'LLVMSetTailCall_internal'(CallInst,IsTailCall)}.
 'LLVMSetTailCall_internal'(_CallInst,_IsTailCall) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGetSwitchDefaultDest'(SwitchInstr :: 'LLVMValueRef'()) -> 'LLVMBasicBlockRef'().
+'LLVMGetSwitchDefaultDest'({'LLVMValueRef',SwitchInstr}) ->
+	{'LLVMBasicBlockRef','LLVMGetSwitchDefaultDest_internal'(SwitchInstr)}.
+'LLVMGetSwitchDefaultDest_internal'(_SwitchInstr) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -4382,10 +3099,17 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
--spec 'LLVMBuildUnwind'(B :: 'LLVMBuilderRef'()) -> 'LLVMValueRef'().
-'LLVMBuildUnwind'({'LLVMBuilderRef',B}) ->
-	{'LLVMValueRef','LLVMBuildUnwind_internal'(B)}.
-'LLVMBuildUnwind_internal'(_B) ->
+-spec 'LLVMBuildLandingPad'(B :: 'LLVMBuilderRef'(),Ty :: 'LLVMTypeRef'(),PersFn :: 'LLVMValueRef'(),NumClauses :: integer(),Name :: string()) -> 'LLVMValueRef'().
+'LLVMBuildLandingPad'({'LLVMBuilderRef',B},{'LLVMTypeRef',Ty},{'LLVMValueRef',PersFn},NumClauses,Name) ->
+	{'LLVMValueRef','LLVMBuildLandingPad_internal'(B,Ty,PersFn,NumClauses,Name)}.
+'LLVMBuildLandingPad_internal'(_B,_Ty,_PersFn,_NumClauses,_Name) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMBuildResume'(B :: 'LLVMBuilderRef'(),Exn :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
+'LLVMBuildResume'({'LLVMBuilderRef',B},{'LLVMValueRef',Exn}) ->
+	{'LLVMValueRef','LLVMBuildResume_internal'(B,Exn)}.
+'LLVMBuildResume_internal'(_B,_Exn) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -4407,6 +3131,20 @@ load_my_nifs() ->
 'LLVMAddDestination'({'LLVMValueRef',IndirectBr},{'LLVMBasicBlockRef',Dest}) ->
 	{atom,'LLVMAddDestination_internal'(IndirectBr,Dest)}.
 'LLVMAddDestination_internal'(_IndirectBr,_Dest) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMAddClause'(LandingPad :: 'LLVMValueRef'(),ClauseVal :: 'LLVMValueRef'()) -> atom().
+'LLVMAddClause'({'LLVMValueRef',LandingPad},{'LLVMValueRef',ClauseVal}) ->
+	{atom,'LLVMAddClause_internal'(LandingPad,ClauseVal)}.
+'LLVMAddClause_internal'(_LandingPad,_ClauseVal) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMSetCleanup'(LandingPad :: 'LLVMValueRef'(),Val :: boolean()) -> atom().
+'LLVMSetCleanup'({'LLVMValueRef',LandingPad},Val) ->
+	{atom,'LLVMSetCleanup_internal'(LandingPad,Val)}.
+'LLVMSetCleanup_internal'(_LandingPad,_Val) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -5035,7 +3773,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
 
 %% @doc Writes a module to the specified path. Returns 0 on success. 
 -spec 'LLVMWriteBitcodeToFile'(M :: 'LLVMModuleRef'(),Path :: string()) -> integer().
@@ -5060,7 +3798,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
 
 %% @doc 
 -spec 'LLVMParseBitcode'(MemBuf :: 'LLVMMemoryBufferRef'()) -> boolean().
@@ -5112,7 +3850,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
 
 %% @doc 
 -spec 'LLVMVerifyModule'(M :: 'LLVMModuleRef'(),Action :: 'LLVMVerifierFailureAction'()) -> boolean().
