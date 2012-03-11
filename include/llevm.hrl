@@ -1,9 +1,9 @@
 %% @@CONST@@
-%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,58}}--
 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% enum LLVMAttribute
 -define(LLVMZExtAttribute,{'LLVMAttribute',1}).
@@ -240,15 +240,15 @@
 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% enum LLVMVerifierFailureAction
 -define(LLVMAbortProcessAction,{'LLVMVerifierFailureAction',0}).

@@ -22,14 +22,14 @@
 
 typedef enum {
 //  @@TYPES@@
-// -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
+// -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,58}}--
 
 RTLLVMDisasmContextRef,
 RTLLVMOpInfoCallback,
 RTLLVMSymbolLookupCallback,
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,8}}--
+// -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,57}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -54,15 +54,15 @@ RTLLVMPassRegistryRef,
 RTLLVMUseRef,
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 RTLLVMVerifierFailureAction,
 // --- Stop generating from Analysis_8h.xml
@@ -76,23 +76,23 @@ typedef struct llvm_ptr {
 } llvm_ptr_t;
 
 // @@RESOURCE_TYPES@@
-// -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,9}}--
+// -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,58}}--
 
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,8}}--
+// -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,58}}--
 
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 // --- Stop generating from Analysis_8h.xml
 
@@ -132,11 +132,11 @@ enif_keep_resource(ptr);
 
 
 // @@FUNCTIONS@@
-// -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,9}}--
+// -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,59}}--
 
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,8}}--
+// -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,58}}--
 
 static ERL_NIF_TERM LLVMDisposeMessage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   char *Message = (char *) malloc(sizeof(char) * 255);
@@ -5048,6 +5048,28 @@ static ERL_NIF_TERM LLVMBuildGlobalStringPtr_nif(ErlNifEnv* env, int argc, const
   return   llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMGetVolatile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  LLVMValueRef MemoryAccessInst;
+  llvm_ptr_deref(env, argv[0], (void **) &MemoryAccessInst);
+
+  LLVMBool retVal = LLVMGetVolatile((LLVMValueRef)MemoryAccessInst);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM LLVMSetVolatile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  LLVMValueRef MemoryAccessInst;
+  llvm_ptr_deref(env, argv[0], (void **) &MemoryAccessInst);
+
+  char *IsVolatile_tmp = (char *) malloc(sizeof(char) * 255);
+  enif_get_atom(env, argv[1], (char*)IsVolatile_tmp, 255, ERL_NIF_LATIN1);
+  LLVMBool IsVolatile = (strcmp(IsVolatile_tmp,"true") == 0);
+
+LLVMSetVolatile((LLVMValueRef)MemoryAccessInst,(LLVMBool)IsVolatile);
+
+  return enif_make_atom(env,"ok");
+}
+
 static ERL_NIF_TERM LLVMBuildTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
@@ -5795,7 +5817,7 @@ LLVMDisposePassManager((LLVMPassManagerRef)PM);
 
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 static ERL_NIF_TERM LLVMWriteBitcodeToFile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   LLVMModuleRef M;
@@ -5841,7 +5863,7 @@ static ERL_NIF_TERM LLVMWriteBitcodeToFileHandle_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 static ERL_NIF_TERM LLVMParseBitcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   LLVMMemoryBufferRef MemBuf;
@@ -5944,7 +5966,7 @@ static ERL_NIF_TERM LLVMGetBitcodeModuleProvider_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 static ERL_NIF_TERM LLVMVerifyModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   LLVMModuleRef M;
@@ -5998,11 +6020,11 @@ LLVMViewFunctionCFGOnly((LLVMValueRef)Fn);
 static ErlNifFunc nif_funcs[] =
   {
 // @@NIF_MAPPINGS@@
-// -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,9}}--
+// -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,59}}--
 
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,8}}--
+// -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,58}}--
 
     {"LLVMDisposeMessage_internal",1,LLVMDisposeMessage_nif},
     {"LLVMContextCreate_internal",0,LLVMContextCreate_nif},
@@ -6415,6 +6437,8 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMBuildStructGEP_internal",4,LLVMBuildStructGEP_nif},
     {"LLVMBuildGlobalString_internal",3,LLVMBuildGlobalString_nif},
     {"LLVMBuildGlobalStringPtr_internal",3,LLVMBuildGlobalStringPtr_nif},
+    {"LLVMGetVolatile_internal",1,LLVMGetVolatile_nif},
+    {"LLVMSetVolatile_internal",2,LLVMSetVolatile_nif},
     {"LLVMBuildTrunc_internal",4,LLVMBuildTrunc_nif},
     {"LLVMBuildZExt_internal",4,LLVMBuildZExt_nif},
     {"LLVMBuildSExt_internal",4,LLVMBuildSExt_nif},
@@ -6463,14 +6487,14 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMDisposePassManager_internal",1,LLVMDisposePassManager_nif},
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
     {"LLVMWriteBitcodeToFile_internal",2,LLVMWriteBitcodeToFile_nif},
     {"LLVMWriteBitcodeToFD_internal",4,LLVMWriteBitcodeToFD_nif},
     {"LLVMWriteBitcodeToFileHandle_internal",2,LLVMWriteBitcodeToFileHandle_nif},
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
     {"LLVMParseBitcode_internal",1,LLVMParseBitcode_nif},
     {"LLVMParseBitcodeInContext_internal",2,LLVMParseBitcodeInContext_nif},
@@ -6480,7 +6504,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMGetBitcodeModuleProvider_internal",1,LLVMGetBitcodeModuleProvider_nif},
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+// -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
     {"LLVMVerifyModule_internal",2,LLVMVerifyModule_nif},
     {"LLVMVerifyFunction_internal",2,LLVMVerifyFunction_nif},

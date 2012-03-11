@@ -5,11 +5,11 @@
 -on_load(load_my_nifs/0).
 
 %% @@EXPORTS@@
-%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,58}}--
 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,57}}--
 
 -export(['LLVMDisposeMessage'/1]).
 -export(['LLVMContextCreate'/0]).
@@ -422,6 +422,8 @@
 -export(['LLVMBuildStructGEP'/4]).
 -export(['LLVMBuildGlobalString'/3]).
 -export(['LLVMBuildGlobalStringPtr'/3]).
+-export(['LLVMGetVolatile'/1]).
+-export(['LLVMSetVolatile'/2]).
 -export(['LLVMBuildTrunc'/4]).
 -export(['LLVMBuildZExt'/4]).
 -export(['LLVMBuildSExt'/4]).
@@ -470,14 +472,14 @@
 -export(['LLVMDisposePassManager'/1]).
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 -export(['LLVMWriteBitcodeToFile'/2]).
 -export(['LLVMWriteBitcodeToFD'/4]).
 -export(['LLVMWriteBitcodeToFileHandle'/2]).
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 -export(['LLVMParseBitcode'/1]).
 -export(['LLVMParseBitcodeInContext'/2]).
@@ -487,7 +489,7 @@
 -export(['LLVMGetBitcodeModuleProvider'/1]).
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 -export(['LLVMVerifyModule'/2]).
 -export(['LLVMVerifyFunction'/2]).
@@ -499,7 +501,7 @@
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
 %% @@TYPES@@
-%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,58}}--
 
 -opaque 'LLVMDisasmContextRef'() :: {'LLVMDisasmContextRef',binary()}.
 %% An opaque reference to a disassembler context. 
@@ -509,7 +511,7 @@
 %% The type for the symbol lookup function. This may be called by the disassembler for things like adding a comment for a PC plus a constant offset load instruction to use a symbol name instead of a load address value. It is passed the block information is saved when the disassembler context is created and the ReferenceValue to look up as a symbol. If no symbol is found for the ReferenceValue NULL is returned. The ReferenceType of the instruction is passed indirectly as is the PC of the instruction in ReferencePC. If the output reference can be determined its type is returned indirectly in ReferenceType along with ReferenceName if any, or that is set to NULL. 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,57}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -547,15 +549,15 @@
 %% Used to get the users and usees of a Value. See the llvm::Use class. 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 -opaque 'LLVMVerifierFailureAction'() :: {'LLVMVerifierFailureAction',integer()}.
 %% --- Stop generating from Analysis_8h.xml
@@ -565,11 +567,11 @@ load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
 %% @@FUNCTIONS@@
-%% -- Start generating from Disassembler_8h.xml on {{2012,2,12},{0,1,8}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,2,25},{14,37,58}}--
 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Core_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% @doc 
 -spec 'LLVMDisposeMessage'(Message :: string()) -> atom().
@@ -3449,6 +3451,20 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMGetVolatile'(MemoryAccessInst :: 'LLVMValueRef'()) -> boolean().
+'LLVMGetVolatile'({'LLVMValueRef',MemoryAccessInst}) ->
+	{boolean,'LLVMGetVolatile_internal'(MemoryAccessInst)}.
+'LLVMGetVolatile_internal'(_MemoryAccessInst) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMSetVolatile'(MemoryAccessInst :: 'LLVMValueRef'(),IsVolatile :: boolean()) -> atom().
+'LLVMSetVolatile'({'LLVMValueRef',MemoryAccessInst},IsVolatile) ->
+	{atom,'LLVMSetVolatile_internal'(MemoryAccessInst,IsVolatile)}.
+'LLVMSetVolatile_internal'(_MemoryAccessInst,_IsVolatile) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMBuildTrunc'(B :: 'LLVMBuilderRef'(),Val :: 'LLVMValueRef'(),DestTy :: 'LLVMTypeRef'(),Name :: string()) -> 'LLVMValueRef'().
 'LLVMBuildTrunc'({'LLVMBuilderRef',B},{'LLVMValueRef',Val},{'LLVMTypeRef',DestTy},Name) ->
 	{'LLVMValueRef','LLVMBuildTrunc_internal'(B,Val,DestTy,Name)}.
@@ -3773,7 +3789,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% @doc Writes a module to the specified path. Returns 0 on success. 
 -spec 'LLVMWriteBitcodeToFile'(M :: 'LLVMModuleRef'(),Path :: string()) -> integer().
@@ -3798,7 +3814,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% @doc 
 -spec 'LLVMParseBitcode'(MemBuf :: 'LLVMMemoryBufferRef'()) -> boolean().
@@ -3850,7 +3866,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,2,12},{0,1,7}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,2,25},{14,37,57}}--
 
 %% @doc 
 -spec 'LLVMVerifyModule'(M :: 'LLVMModuleRef'(),Action :: 'LLVMVerifierFailureAction'()) -> boolean().
